@@ -1,0 +1,5280 @@
+MEDIATEK 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+Application Processor 
+Technical Brief 
+
+
+Version: 0.3 
+Release date: 2013-12-31 
+
+
+© 2011 - 2014 MediaTek Inc. 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+Specifications are subject to change without notice. 
+
+
+MT6595 
+
+
+Octa-Core Smartph 
+M E D Li TER Apple ee 
+
+
+Technical Brief 
+
+
+Document Revision History 
+
+
+[Revision | ^ Date | Author  [ Description 
+2013-10-24 Kelly Teng 
+
+
+aa | KelyTeng | — — — — LL 
+IE [ KelyTem | — — — — — — 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 2 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+
+Octa-C Smartphone 
+M E D Li TER RENE ee 
+
+
+Technical Brief 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 3 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+
+Octa-Core Smartph 
+M E D Li TER RE 
+
+
+Technical Brief 
+
+
+Table of Contents 
+
+
+Document Revision HiStOry ——————s 2 
+IEUImPiulenilgce A ——————————————Á 4 
+1 Systemi OVervieW Me ———————————— S 7 
+1.1 Platform Features nennen enne ennenrrn EARNAN EEA 8 
+
+1.2 MODEM NITWUICICNEM—————————— 9 
+
+1.3 Multimedia Features ...........ceeccceeceecccceeeeeceeeeeeeceeeeeeeceeeeeaececeseeseeesneeaeeesneeaeeeenenseeessenaeeeenenes 11 
+
+1.4 General Descriptions ...................sssssssssssssesssesenee enne enhn enne trt en tenter intr r snnt nennen 13 
+
+2 Prodüct Description... nee ANARAN ANARAN NAA NA RRRA NARAN ANAR AAA ED en eL D i red 15 
+21 . Zi ———————————————— MÓN 15 
+
+2.1.1 Ball Map VIG ————————— 15 
+
+2.1.1 Neige EE 16 
+
+2.1.2 Detailed Pin Description. 26 
+
+2.2 Electrical Characteristic ......................ssssssssssssseseseeeeeeeee enne nnne nennen enne nnns 39 
+
+2.2.1 Absolute Maximum Ratings .................. esse eene nene nennen 39 
+
+2.2.2 Recommended Operating Conditions ...........essseesseesseeeseeeseenrnenn nenn nnnnrtnnsennsen nena 41 
+
+2.2.3 Storage Condton. esie ias dina saakaan iaa aaiae aaa aAa 43 
+
+2.2.4 AC Electrical Characteristics and Timing Diagram .......................ssssssss 43 
+
+2.3 System Configuration ..................sssssssssssssssseses eee nnne nene en rennen nnn enne nns 47 
+
+2.3.1 Mode Gelechon. enne entren nennen intret tenens 47 
+
+2.3.2 Constant Tied Pins. 47 
+
+2.4 Power-on Sequence enne enne en teneis inris sn tete enne seins sinn en tenens 47 
+
+2:5. "Analog BASSO ah ee o ettet ete ed Ee cess te Fare erede ds 48 
+
+2.5.1 later elei erte eer 48 
+
+2.5.2 EIU c4 49 
+
+2.5.3 Block Diagram ECCE 49 
+
+2.6 Package Information... osse tiae ERENNERT neni 72 
+
+2.6.1 Package Outlines ...................... sse enne nennen nnns nnns 72 
+
+2.6.2 Thermal Operating Specifications ........................sssssseeeeennene 72 
+
+2.6.3 Lead-tree Packaging... eee e ere cet eee 72 
+
+2./ elteren te Tuut 73 
+
+2.7.1 Top Marking Definition .......................eeesseeeseeneenenn nennen nennen 73 
+
+
+List of Figures 
+
+
+Figure 1-1. Block diagram e dE 14 
+Figure 2-1. Bottom ball map view of MT6595 ...............sssssssssessseeeneeeenen eene nennen enn 15 
+Figure 2-2. Top ball map view of MIGbOn nennen ener enne nnn 16 
+Figure 2-3. Basic timing parameter for LPDDR3 commande... 43 
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 4 of 73 
+
+
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+
+Octa-Core Smartph 
+M E D Li TER RE 
+
+
+Technical Brief 
+
+
+Figure 2-4. Basic timing parameter for LPDDRS Write A 44 
+Figure 2-5. Basic LPDDRS read timing parameter. enne 44 
+Figure 2-6. Power on/off sequence with STAA 48 
+Figure 2-7. Block diagram of LTE BBRX-ADO ...............ssssssssssssseeeeeeee nennen nennen rnnt nnns 50 
+Figure 2-8: Block diagram of TD BBRX-ADO .............ssssssssssssseseeeeneen eene en nennen nsns 52 
+Figure 2-9. Block diagram of LTE BRIX nennen nenne enne a enne enn 53 
+Figure 2-10. Block diagram of TD. BBI. 55 
+Figure 2-11. Block diagram of EIDA... 56 
+Figure 2-12. Block diagram of APC- DAC 57 
+Figure 2-13. Block diagram of AUXADOC enne enne nnns sn tenter snnt 58 
+Figure 2-14. Block diagram of DILL 62 
+Figure 2-15. Outlines and dimensions of WFPOP 14mm*14mm, 823-ball, 0.4mm pitch package ...... 72 
+Figure 2-16. Top mark of EE 73 
+List of Tables 
+
+Table 2-1... Bottom Pin coordinate ............... iiis ci cer tere pine ceca itera obese eaae he ena era snb a 16 
+Table: 252... Top eege i-e 24 
+Table. 2:3. Acronym for pin Be e 26 
+Table 2-4. Detailed pin descripti OMe. ————————————— — 26 
+Table 2-5. Absolute maximum ratings for power supply ......................ssseeeee emn 39 
+Table 2-6. Recommended operating conditions for power Supp... 41 
+Table 2-7. LPDDR3 AC timing parameter table of external memory Interface. 44 
+Table 2-8. Mode selection of chip REENEN 47 
+Table 2-9. Constant tied pins of Chip enne tn nennen snnt nens 47 
+Table 2-10. Baseband downlink specifications .........................sseeseeeneeenn enne 50 
+Table 2-11: Baseband downlink specifications.. nennen 52 
+Table-2512; ETE. BBTX specifications ...... ecce rente expe coe Fen a eue Reha xt nente ecu aae Rex seed Raa 53 
+Table 2-13. TD_BBTX Specifications. A 55 
+Table-2-14:'ETDAG specifiCationis ...::...... ettet tre codes deste aa Eed edd eege AER 56 
+Table-2-15. lee E 57 
+Table 2-16. Definitions of AUXADC channels sse enne nnne 59 
+Table 2-17. AUXADC specifications ................ esses eene ennt nnns nnns n nnne renis 59 
+Table 2-18. Clock squarer specifications ........................ sss eene 60 
+Table 2-19. ARMCA7PLL specifications.................... esses enne en nens 63 
+Table 2-20. ARMCA17PLL spechflcatons esses ennemi renis 63 
+Table 2-21. MAINPLL specifications AA 63 
+Table 2-22. MMPLL specifications «00.00... ee eececeeeeeceeeeeenneeeeeeaeeeeeeaaeeeeeeaaeeeeeeaaeeeeeeaaeeeeeeaaeeeeeeaeeeeeeaeeeeeeaaes 64 
+Table 2-23. UNIVPLL specifications... enn ener nennen 64 
+Table 2-24. MSDCPLL specifications nnne nnne nennen nnne nnnenis 65 
+Table 2-25. MDPLL1 specifications... nennen nennen nennen nnne 65 
+Table 2-26. MDPLL2 specifications AA 66 
+Table 2-27. LTEWPLL specifications... nennt a tua paa pane ea aenea) 66 
+Table 2-28. LTEWHPLL specifications ..........................eeeessesseesseeeeeeeeeeeeneee nennen enne nnn nnne nennen 66 
+Table 2-29. CR4PLL specifications .....................sssssssssssssssees seen ener trenes nnne en nens 67 
+Table 2-30. VENCPLL specifications ....................sssssssssssssess eee enne nennen nennen rennen enne 67 
+Table2°313 DPI URBE dI m ——————— 68 
+Table 2-32. CRAPLL2 specifications ....................sssssssssssssssssseeseneeneen nnne nnn et nennen nnne nens 68 
+Table 2-33. OGTWPLL specifications ...................ssssssssssssssesseeeenenneeeen nnne nnenen nennen senten renis 68 
+Table 2-34. LTEDSPPLL epechfcaitons ener nnne neni 69 
+Table 2-39 s SPOCIICATIOMS eis e ————————Á—É 69 
+Table2-36:APLL Ed egi ————————————: 69 
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 5 of 73 
+
+
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+
+M f= D | A TEK Octa-Core Smartphone 
+
+
+Application Processor 
+Technical Brief 
+
+
+Table 2-37; APLL2 specifications EE 70 
+Table 2-38. VCODECPLL specifications ............ccccccceeeeeeeeeceeseeeeeeeeceaeeeeaeeseeeesaaeeesaaeseeneeseaeeessaeeeeaeeeeeees 70 
+Table 2-39. Temperature sensor spechficatons nennen 71 
+Table 2-40. Thermal operating specifications .......................essseseee eene eene nens 72 
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 6 of 73 
+
+
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+
+Octa-Core Smartph 
+M E D Li TER RE 
+
+
+Technical Brief 
+
+
+1 System Overview 
+
+
+MT6595 is a highly integrated baseband platform incorporating modem and application processing to 
+enable LTE smart phone applications. The chip integrates ARM® Cortex-A17 operating up to 2.2GHz 
+and ARM® Cortex-A7 MPCore™ operating up to 1.7GHz, an ARM® Cortex-R4 MCU and powerful 
+multi-standard video codec. The MT6595 interfaces to LPDDR3 for ultimate performance and also 
+supports booting from eMMC to minimize the overall BOM cost. In addition, an extensive set of 
+interfaces are included to interface to cameras, touch-screen displays, USB3.0, and MMC/SD cards. 
+
+
+The application processor, Quad-core ARM® Cortex-A17 MPCore™ plus Quad-core ARM® Cortex- 
+A7 MPCore™ which equipped with NEON engine, offers processing power necessary to support the 
+latest OpenOS along with its demanding applications such as web browsing, email, GPS navigation 
+and games. All are viewed on a high resolution touch screen display with graphics enhanced by the 
+3D graphics acceleration. The multi-standard video codec and an advanced audio subsystem are also 
+integrated to provide advanced multimedia experiences and services such as streaming audio and 
+video, a multitude of decoders and encoders such as HEVC and H264. Audio supports include FR, 
+HR, EFR, AMR FR, AMR HR and Wide-Band AMR vocoders, polyphonic ringtones and advanced 
+audio functions such as echo cancellation, hands-free speakerphone operation and active noise 
+cancellation. 
+
+
+An ARM® Cortex-R4, DSP, and 2G and 3G coprocessors provide a powerful modem subsystem 
+capable of supporting LTE Cat 4(150Mbps), Category 24 (42 Mbps) HSDPA downlink and Category 7 
+(11 Mbps) HSUPA uplink data rates, Category 14 (2.8Mbps) TD-HSDPA downlink and Category 6 
+(2.2Mbps) TD-HSUPA uplink as well as Class 12 GPRS, EDGE. 
+
+
+The enhanced overall quality is achieved for simultaneous voice, data, and audio/video transmission 
+on mobile phones and Media Tablets. The small footprint with low-power consumption greatly reduces 
+the PCB layout resource. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 7 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+
+Octa-Core Smartph 
+M E D Li TER Apple ee 
+
+
+Technical Brief 
+
+
+1.1 Platform Features 
+
+
+. General 
+— Smartphone two MCU subsystems architecture 
+— eMMC bootloader 
+
+
+e AP MCU subsystem 
+— Quad-core ARM® Cortex-A17 MPCore™ operating at 2.2 GHz, 2MB L2 cache 
+— Quad-core ARM® Cortex-A7 MPCore™ operating at 1.7 GHz, 512KB L2 cache 
+— NEON multimedia processing engine with SIMDv2 / VFPv4 ISA support 
+— 32KB L1 Lcache and 32KB L1 D-cache 
+— DVFS technology with adaptive operating voltage from 0.8V to 1.15V 
+
+
+e MD MCU subsystem 
+— ARM® Cortex-R4 processor with maximum 800 MHz operation frequency 
+— 64KB I-cache, 64KB D-cache 
+— 512KB TOM (tightly-coupled memory) 
+— Coresonic DSP for running LTE modem tasks, with maximum 300MHz operation frequency 
+— FD216 DSP for running modem/voice tasks, with maximum 250MHz operation frequency 
+— High-performance AXI and AHB bus 
+— General DMA engine and dedicated DMA channels for peripheral data transfer 
+— Watchdog timer for system error recovery 
+— Power management for clock gating control 
+
+
+e MD external interfaces 
+— Dual SIM/USIM interface supported 
+— Interface pins with RF and radio-related peripherals (antenna tuner, PA, ...) 
+
+
+e External memory interface 
+— Supports LPDDR3 up to 4GB 
+— Dual channel, each with 32-bit data bus width 
+— Memory clock up to 933 MHz 
+— Supports self-refresh/partial self-refresh mode 
+— Low-power operation 
+— Programmable slew rate for memory controller's IO pads 
+— Supports dual rank memory device 
+— Advanced bandwidth arbitration control 
+
+
+e Security 
+— ARM® TrustZone® Security 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 8 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+H Connectivity 
+
+— USB2.0 high-speed dual mode supporting 8 Tx and 8 Rx endpoints 
+
+— USB3.0 device mode. 
+
+— eMMC5.0 
+
+— 4UARTs for external devices and debugging interfaces 
+
+— SPI master for external devices 
+
+— 5 [2C to control peripheral devices, e.g. CMOS image sensor, or LCM module 
+
+— 12S master output and master/slave input for connection with optional external hi-end audio 
+codec 
+
+— GPIOs 
+
+— 4 sets of memory card controller supporting SD/SDHC/MS/MSPRO/MMC and SDIO2.0/3.0 
+protocols 
+
+
+e Operating conditions 
+— Core voltage: 1.0V 
+— Processor DVFS+SRAM voltage : 0.8V~1.15V (Typ. 1.0V ; sleep mode 0.7V) 
+— |/O voltage: 1.8V/2.8V/3.3V 
+— Memory: 1.2V 
+— LCM interface: 1.8V 
+— Clock source: 26-MHz, 32.768-kHz 
+
+
+° Package 
+
+— Type: MWPOP 
+
+— 14mm x 14mm 
+
+— Height: 0.78mm maximum 
+Ball count: Top 256 balls, Bottom 823 balls 
+Ball pitch: Top 0.4mm, Bottom 0.4mm 
+
+
+1.2 MODEM Features 
+
+
+H LTE 
+- FDD: up to 150 Mbps downlink, 50 Mbps uplink 
+- TDD: up to 61 Mbps downlink, 18 Mbps uplink in 20 MHz 
+- 1.4 to 20 MHz RF bandwidth 
+- 2x2 downlink SU-MIMO; 4 x 2 downlink SU-MIMO 
+- IPv6, QoS 
+- |nter-RAT capabilities with HSPA+, EDGE, and applicable backward-compatible modes 
+- SNOW3G/ZUC cipher offload engine 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 9 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+e 3G UMTS FDD supported features 
+— 3G modem supports most main features in 3GPP Release 7 and Release 8 
+— CPC (DTX in CELL DCH, UL DRX DL DRX), HS-SCCH-less, HS-DSCH 
+— Dual cell operation 
+— MAC-ehs 
+— Two DRX (receiver diversity) schemes in URA PCH and CELL PCH 
+— Uplink Cat. 7 (16QAM), throughput up to 11.5Mbps 
+— Downlink Cat. 24 (64QAM, dual-cell HSDPA), throughput up to 42.2Mbps 
+— Fast dormancy 
+- ETWS 
+— Network selection enhancements 
+
+
+e TD-SCDMA 
+— CDMA/HSDPA/HSUPA baseband 
+— Supports TD-SCDMA Bands 34, 39 & 40 and Quad band GSM/EDGE 
+— Circuit-switched voice and data, and packet-switched data 
+— 384/384Kbps class in UL/DL for TD-SCDMA 
+— TD-HSDPA: 2.8Mbps DL (Cat.14) 
+— TD-HSUPA: 2.2Mbps UL (Cat.6) 
+— F8/F9 ciphering/integrity protection 
+
+
+e Radio interface and baseband front-end 
+— High dynamic range delta-sigma ADC converts the downlink analog | and Q signals to digital 
+baseband 
+10-bit D/A converter for Automatic Power Control (APC) 
+— Programmable radio Rx filter with adaptive gain control 
+— Dedicated Rx filter for FB acquisition 
+Baseband Parallel Interface (BPI) with programmable driving strength 
+Supports multi-band 
+
+
+e GSM modem and voice CODEC 
+— Dial tone generation 
+— Noise reduction 
+— Echo suppression 
+— Advanced sidetone oscillation reduction 
+— Digital sidetone generator with programmable gain 
+— Two programmable acoustic compensation filters 
+— GSM quad vocoders for adaptive multirate (AMR), enhanced full rate (EFR), full rate (FR) and 
+half rate (HR) 
+— GSM channel coding, equalization and A5/1, A5/2 and A5/3 ciphering 
+— GPRS GEA1, GEA2 and GEAS ciphering 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 10 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+— Programmable GSM/GPRS/EDGE modem 
+
+— Packet switched data with CS1/CS2/CS3/CS4 coding schemes 
+
+— GSM circuit switch data 
+
+— GPRS/EDGE Class 12 
+
+— Supports SAIC (single antenna interference cancellation) technology 
+
+— Supports VAMOS (Voice services over Adaptive Multi-user channels on One Slot) technology 
+in R9 spec 
+
+
+1.3 Multimedia Features 
+
+
+e Display 
+— Supports portrait panel resolution up to WQXGA (2560x1600) 
+— MIPI DSI interface (8 data lanes) 
+— MiraVision™ for picture quality enhancement 
+— ClearMotion™ for DTV-class video quality 
+— Embedded LCD gamma correction 
+— Supports true colors 
+— 4 overlay layers with per-pixel alpha channel and gamma table 
+— Supports spatial and temporal dithering 
+— Supports side-by-side format output to stereo 3D panel in both portrait and landscape modes 
+— Supports color enhancement 
+— Supports adaptive contrast enhancement 
+— Supports image/video/graphic sharpness enhancement 
+— Supports dynamic backlight scaling 
+— Support wide gamut 
+
+
+e Graphics 
+— OpenGL ES 3.0 3D graphic accelerator capable of processing 150M tri/sec and 2,400M 
+pixel/sec @ 600MHz 
+— OpenVG1.1 vector graphics accelerator 
+
+
+e Image 
+— Integrated image signal processor supports 20 MP 
+— Supports electronic image stabilization 
+— Supports video stabilization 
+— Supports preference color adjustment 
+— Supports noise reduction 
+— Supports lens shading correction 
+— Supports auto sensor defect pixel correction 
+— Supports AE/AWB/AF 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 11 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+— Supports edge enhancement (sharpness) 
+
+— Supports face detection and visual tracking 
+
+— Supports video face beautify 
+
+— Supports zero shutter delay image capture 
+
+— Supports capturing full size image when recording video (up to 20M sensor) 
+
+— Supports 3 MIPI CSI-2 high-speed camera serial interface, two with 4 data lane (for main) and 
+one with 2 data lane (for sub) 
+
+— Hardware JPEG encoder: Baseline encoding with 300M pixel/sec 
+
+— Supports YUV422/YUV420 color format and EXIF/JFIF format 
+
+
+e Video 
+— HEVC decoder 4k2k @ 30fps 
+— VP9 decoder 1080p @ 30fps (SW) 
+— H.264 decoder: Baseline 4k2k @ 30fps/40Mbps 
+— H.264 decoder: Main/high profile 4k2k@30fps/40Mbps 
+— Sorenson H.263/H.263 decoder: 1080p @ 60fps/40Mbps 
+— MPEG-4 SP/ASP decoder: 1080p @ 60fps/40Mbps 
+— DIVX4/DIVX5/DIVX6/DIVX HD/XVID decoder: 1080p @ 60fps/40Mbps 
+— VP8 decoder: 1080p @ 60fps/6Mbps 
+— VC-1 decoder: 1080p @ 60fps/20Mbps 
+— MPEG-4 encoder: Simple profile 1080p @ 30fps (SW) 
+— H.263 encoder: 1080 @ 30fps (SW) 
+— H.264 encoder: High profile 1080p @ 60fps 
+— HEVC encoder: Main profile 4k2k @ 30fps 
+
+
+e Audio 
+
+— Audio content sampling rates supported: 8kHz to 192kHz 
+
+— Audio content sample formats supported: 8-bit/16-bit/24-bit, Mono/Stereo 
+
+— Interfaces supported: I28, PCM 
+
+— External CODEC 128 interface supports 16-bit/24-bit, Mono/Stereo, 8kHz to 192kHz 
+
+— 4-band IIR compensation filter to enhance loudspeaker responses 
+
+— Proprietary audio post-processing technologies: BesLoudness(MB-DRC), Android built-in post 
+processing 
+
+— Audio encode: AMR-NB, AMR-WB, AAC, OGG, ADPCM 
+
+— Audio decode: WAV, MP3, MP2, AAC, AMR-NB, AMR-WB, MIDI, Vorbis, APE, AAC-plus v1, 
+AAC-plus v2, FLAC, WMA, ADPCM 
+
+— Voice Wakeup 
+
+— 7.1 channel for MHL output 
+
+
+. Speech 
+— Speech codec (FR, HR, EFR, AMR FR, AMR HR and Wide-Band AMR) 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 12 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+— CTM 
+
+— Noise reduction 
+
+— Noise suppression 
+
+— Noise cancellation 
+
+— Dual-MIC noise cancellation 
+
+— Echo cancellation 
+
+— Echo suppression 
+
+— Multi-MIC input (up to 4 MICs) 
+
+— Handset mode ANC (active noise reduction) 
+— Multi-MIC noise cancellation 
+
+— Multi-MIC voice tracking 
+
+— Multi-MIC sound recording w/t Wind Noise Rejection 
+
+
+1.4 General Descriptions 
+
+
+MediaTek MT6595 is a highly integrated LTE System-on-chip (SoC) which incorporates advanced 
+features e.g. LTE cat.4, Octa HMP core operating at 2.2GHz, 3D graphics (OpenGL|ES 3.0), 20M 
+camera ISP, and LPDDR3-1866 Mbps, WQHD display and 4k2k video codec. MT6595 helps phone 
+manufacturers build high-performance LTE smart phones with PC-like browser, 3D gaming and 
+cinema class home entertainment experiences. 
+
+
+World-leading technology 
+Based on MediaTek's world-leading mobile chip SoC architecture with advanced 28nm process, 
+
+
+MT6595 is the brand-new generation smart phone SoC integrating MediaTek LTE modem, Quad-core 
+ARM® Cortex-A7 MPCore™ and ARM® Cortex-A17 MPCore™, 3D graphics and 4k2k video codec. 
+
+
+Rich in features, high-valued product 
+To enrich the camera features, MT6595 equips a 20M camera ISP with advanced features e.g. auto 
+
+
+focus, electrical stabilization, auto sensor defect pixel correction, continuous video AF, face detection, 
+face beautify, burst shot, optical zoom, panorama view and 3D photos. 
+
+
+Incredible browser experience 
+The powerful big-Little CPU architecture with NEON multimedia processing engine brings PC-like 
+
+
+browser experiences while keeps low standby power. GPU which supports OpenGL|ES 3.0 also 
+provides excellent multimedia experiences. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 13 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED | A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2-ch LPDDR3 USB seng 
+933MHz DS Hostidevice 
+
+
+MEDIATEK 
+MT6595 E- o 
+L2cache ^ L2cache 128KB SLC U^ We 
+
+
+20MPixel Image Signal 
+ARM® ARM® Processor 
+
+
+Cortex-A17 | Cortex-A7 IMG™ G6200 
+MPCore MPCore 3D Graphics 
+
+
+MT6630- 
+men 
+-—— s | 
+
+
+MT6331/6332 32kHz Crystal 
+
+
+Switching Charger D 
+
+
+4K2K Video Codec I2S|SP| D 
+
+
+AMBA4 AXI 128bit BUS 
+
+
+HSPA* Security Engine 
+LTE R9 
+
+
+HiFi Audio WQXGA 
+Processor Display Engine 
+MiraVision™ 
+
+
+ClearMotion™ 
+FD21 P Peripherals 
+
+
+MT6169 
+
+
+Battery 
+
+
+Lei 
+Sc. um TT 
+
+
+CDMA Modem | 
+
+
+EES ^ E 
+
+
+Figure 1-1. Block diagram of MT6595 
+
+
+MIPI DPI 
+
+
+MHL Bridge 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 14 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2 Product Description 
+
+
+2.1 Pin Description 
+
+
+2.1.1 Ball Map View 
+
+
+n|B u 5 6 y 5 5 2 uz 2 n n 5 5 E 5 5 9» 3 n n5 
+VREF(D 
+
+el. ona [X voda x Voda x QA oda ES 
+[Eg 
+D 
+
+
+iri 
+
+
+Ei 
+Ei 
+
+
+PAE 
+SES 
+
+CS 
+3 4 le ale a 
+
+
+X 
+
+
+2 
+DEDE 
+z|=|s|<|e|=|»|»|z|z|-|=|-|=|a|ļ=|m|ojaje|>» 
+
+
+MPLL | MPLL 
+8 ARM | 8 ARM 
+
+
+EE E | i 
+
+
+BC 
+
+
+DVDD |DVOD | TETX LTE NZ 
+EES aXe i 
+
+
+AF AF 
+AVDDI | AVSS1 
+
+E ki VE MENE| H AG 
+
+AH AH 
+
+A) AJ 
+
+AK AK 
+AVSST spem 
+
+AL | VODO ep LS. oN | AL 
+
+m EES | a 
+TP MEN IN ZA KSE Ke re NEM 
+
+AP p a | VO00 x] X vona | voot DX] vona AP 
+
+3B | 4| 5 | 6 | 17 | | 9 |20|21 22 | 232 | 42125 | 29 | 2 | 282 | 39 | SE JEDE] 
+
+
+1 2 3.4 |.9 6 7| 8 SE JE IE 
+
+
+Figure 2-1. Bottom ball map view of MT6595 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 15 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+1 2;3/)/4/5|6)7 | 8] 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 
+
+
+A A 
+B DNU| B 
+C C 
+D D 
+E E 
+F F 
+G G 
+H H 
+J J 
+K K 
+L L 
+M M 
+N N 
+P P 
+R R 
+T T 
+U U 
+V M 
+w w 
+Y T 
+AA AA 
+AB AB 
+AC AC 
+AD AD 
+AE AE 
+AF AF 
+AG AG 
+AH AH 
+AJ AJ 
+AK AK 
+AL [| AL 
+AM vwu | AM 
+AN AN 
+AP onu | AP 
+
+
+1 2 3|4|5]|6,7/|8/,9 |10,| 11| 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 
+
+
+Figure 2-2. Top ball map view of MT6595 
+
+
+2.1.1 Pin Coordinate 
+
+
+Table 2-1. Bottom Pin coordinate 
+
+
+Ball Ball Ball 
+EINE ANNE RFICQ-BSIDZ [ACTS | D Dr 
+RFICO BSI EN AC14 DVDD DVFS1 
+
+
+DVS 
+
+
+w| vwo —— [| Nr | Wm Ier De | 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 16 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+Ball Ball Ball 
+
+
+"an" MSDC3 DAT2 | DSS 9 | AC20 | DVDD DVFS2 
+VDDQ — S Aco DVDD_DVFS2 
+DVSS DVSS AC22 DVSS 
+
+
+VDDQ DVDD_GPU AC23 DVDD_CORE1 
+RDNO DVDD_GPU AC24 DVDD CORE! 
+
+
+DVSS 
+RDP2_A DVSS DVSS 
+LTE RX2 BBIN 
+[TE_RX2_BBQP 
+
+
+DPI DS 
+DPI DS 
+
+
+[Aw | WII moer A | De — ] 
+EE EE 
+[85 | vwa — IST armen [Aoi voo oves —] 
+[85 | mmm [Now Dë Isi De — —] 
+SSUSB VRT 
+[89 | moere | Ps | Wer 
+[B0] wss fe ves [Aoi vvs —| 
+[8r | mocs omi — | Pe | Dë Ier Dvo bvse —] 
+[Brz| —wsocscup —[ r9 | Dë e DS  —] 
+UTxD2 
+
+
+CON RST DVSS 
+Dvss 
+
+
+"De 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 17 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+Ball Ball Ball 
+
+
+SECH | || RCNA  ű O A GER | DSS  »— — AET | DPI D4 
+mL NM NEM, MEM PC 
+
+
+RDPO B DVDD CORE! SDA3 
+RCP B DVDD CORE! AE11 DVSS 
+EINT10 DVDD CORE! AE12 DVSS 
+EINT14 DVSS AE13 DVSS 
+EINT15 DVSS AE14 DVDD CORE! 
+SCL2 DVSS AE15 DVDD CORE! 
+SCLO TD RX BBIN AE16 DVDD CORE! 
+BPI BUSO AVSS18 PLLGP AE17 DVDD CORE! 
+VDD1 VDDQ AE18 DVSS 
+DVSS SPI CS AE19 DVDD SRAM2 
+TP MEMPLL A MSDC1 CMD AE20 DVDD SRAM2 
+| C1 o| VDDQ VCC18lO MC1 AE21 DVSS 
+VDD1 MSDC1 DATO AE22 DVDD CORE! 
+| C3 | VDD1 TESTMODE AE23 DVDD_CORE1 
+AVSS33 USB P1 | R8 | DVSS AE24 DVDD CORE! 
+ENS AVDD18 USB P1 | R9 | DVSS AE25 DVSS 
+AVDD33 USB P0 DVSS AE26 DVSS 
+
+| C7 | DVSS DVSS AE30 LTE TX BBIP 
+USB VBUS PO DVSS AE32 LTE RX1 BBQP 
+VCC18lO MC3 DVSS DPI D1 
+DVSS DVSS l2S83 DATA3 
+DAISYNC DVSS VCC18IO I2S 
+AVDD18 MIPIRXO DVSS DDRV B 
+DVSS DVSS AF10 DVSS 
+DVSS AFIZ |  DVDD CORE! 
+DVSS ET DVDD_CORE1 
+
+
+DVSS DVSS AF15 DVDD_CORE2 
+RDPO A DVSS AF16 DVDD CORE2 
+
+
+RDNO A DVDD CORE! AF17 DVDD CORE! 
+AVSS18_MIPIRX DVDD_CORE1 AF18 DVDD_CORE1 
+RDP1 B DVDD CORE! AF19 DVDD CORE! 
+RDN1 B DVDD CORE! AF20 DVDD CORE! 
+EINT 11 DVSS AF21 DVDD_CORE1 
+CMPCLK TD RX BBIP AF22 DVDD CORE! 
+DPI BUS) AVDD18 MD AF23 DVDD_CORE1 
+DPI BUS2 AVDD18 MD AF24 DVDD_CORE1 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 18 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+= Sr ne [RE 
+AVSS18 MEMPLL A AVSS18 MD | AF25 | DVSS 
+VDDQ VDDQ Eg DVSS 
+EINT9 MSDCO RST AF33 DVSS 
+EINT8 SPI CK AF34 VDDQ 
+
+| D3 | EINT7 SPI MI l283 DATAO 
+| D4 | IDDIG SPI_MO l283 DATA2 
+USB VRT P1 DVSS l283 MCK 
+| D6 | CHD DP PO DVSS l283 DCK 
+CHD DM PO DVDD CORE2 DVSS 
+
+| D9 | SSUSB RXP DVDD CORE2 GO DATAO 
+SSUSB RXN DVSS DDRV B 
+DVSS DVSS AG10 DVSS 
+MSDC3 DAT3 DVSS AG11 VBIASN1 B 
+DAIPCMIN DVSS AG12 DVSS 
+DAICLK DVSS AG13 DVSS 
+RDP2 DVSS AG14 DVSS 
+
+
+Dvss 
+OVS 
+
+
+ss 
+ROPTA Dvss 
+
+
+Eer Dvss 
+OVS 
+
+
+DPI BUS3 REFN AG25 | AVDD18 MEMPLLPOP 
+VCC28IO BP REFP AG26 | AVSS18 MEMPLLPOP 
+BPI BUS6 MSDCO DSL AG31 ET P 
+AVDDT8 MEMPLL A MSDCO CMD ^ (ae 
+EINT6 | U6 | DVSS AG33 ZQ0 B 
+
+| E4 | EINT5 DVDD DVFS1 VDDQ 
+AVSS10 SSUSB DVDD DVFS1 l2S83 DATA 
+AVSS10 SSUSB DVDD DVFS1 INT SIM2 
+MSDC3 CLK DVDD DVFS1 INT SIM1 
+
+PTA RXD DVDD DVFS1 12S3_LRCK 
+PTA_TXD DVDD DVFS1 GO DATA1 
+DVSS DVDD DVFS1 DDRV B 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 19 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+Eej ma Urs | 
+E 
+AVSS18_MIPIRX DDRVPOP 
+DVSS DDRVPOP 
+
+
+EN EINT3 AUXINO KPCOL2 
+EINT2 AVDD18 PLLGP GO MCK 
+
+
+| F5 | EINT4 TD_TX_BBQN DDRV_B 
+F7 | AVDD18 USB P0 MSDCO DAT5 AJ10 DDRV B 
+
+
+SSUSB TXN MSDCO DAT1 AJ11 DDRV B 
+F12 MSDC3 DATO MSDCO DATA AJ24 DVSS 
+
+
+"e 
+vob 
+
+[G1 | veca emb — | Vi | DVDD-DVFST | Aks | VOOSSO Sz 3] 
+SI — ENT fm] Ds Ne s 
+WATCHDOG 
+Gs 
+OVS 
+DVDD16 EFUSE 
+
+
+MediaTek Confidential € 2013 - 2014 MediaTek Inc. Page 20 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+Ball Ball Ball 
+
+
+SRCLKENAO AUXIN2 AK29 DVSS 
+DVSS AVDD18 AP AK30 DVSS 
+
+
+DDRV A TD TX BBQP AK31 DPI OUT15 
+DDRV A TD TX BBIP AK33 MISC. BSI DI 
+
+
+DDRV A VREF(DQ) B VDDQ 
+VREF A MSDCO DAT2 AVSS18 MEMPLL B 
+
+
+BPI OUT14 MSDCO CLK DVSS 
+BPI OUT12 MSDCO DATO KPROW1 
+VDDQ VCC18lIO MCO SIM2 SRST 
+SRCLKENA1 DVDD DVFS1 SIM2 SCLK 
+SRCLKENAI DVDD DVFS1 DVSS 
+DVDD GPU DVDD DVFS1 I280 LRCK 
+DVDD GPU DVDD DVFS1 AL10 URTSO 
+DVDD_GPU DVDD DVFS1 AL11 JTDO 
+DVDD GPU DVDD DVFS1 AL12 JTDI 
+DVSS DVDD DVFS1 AL14 LCM RST 
+
+
+DVDD GPU DVSS AL15 TON A 
+DVSS AVDD18 ARMPLL AL16 TCP A 
+
+
+DVDD GPU AVSS18 ARMPLL AL17 VRT A 
+DVSS DVSS AL18 TDNO A 
+
+
+TOPO A 
+TON 
+
+
+Dvss 
+UCTS 
+
+
+DDRV_A AVSS18 MD AL30 PAVMO 
+DDRV A AVSS18 MD AL31 DPI OUT16 
+
+
+EXTDN A TD TX BBIN AL32 DPI OUT17 
+RFIC1 BSI DO MSDCO DAT6 AL33 LTE TXBPI 
+
+
+mee per pre 
+SE 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 21 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+Ball Ball Ball 
+
+
+| DSS |» oO | Y12 | 2 | DSS  »— — DVSS 
+DVSS NEL MM DVSS 
+
+
+Ba — oves lee: PL oe 
+DVSS DVDD DVFS1 AM10 VCC18lIO UART 
+DVDD GPU DVDD_SRAM1 AM11 JTRST B 
+
+
+pe 
+
+
+TOPS 
+TONG 
+
+
+Dvss De 
+
+
+Dvss APC2 AM30 DVSS 
+VBIASN1 A AVDD28 DAC AM31 DPI OUT21 
+
+
+BPLOUTIS 
+meer Gem 
+AUD DAT MOSI UTXD3 
+[15 | — ovs Ian mme — ANT | — SIMi-SCLK — ] 
+
+
+DVDD e ITOK 
+ZOA 
+
+
+TORS A 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 22 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+Ball Ball Ball 
+
+DVDD_CORE2 "AAS DVDD_CORE2 ANTS VREF(CA)_A 
+DVSS er DVSS AN19 AVDD18. MIPITX2 
+DVSS AA28 LTEX26M IN AN20 TDN2 
+DVSS AA33 DVSS AN?1 TDP2 
+DVDD CORE1 AA34 VREF(CA) B AN22 TDP1 
+DVDD CORE! VDDQ AN23 AVDD18. MIPITX1 
+DVSS DPI D11 AN24 MSDC2_CLK 
+DVSS DPI D10 AN25 MSDC2 DAT2 
+
+
+DVSS DPI CK AN26 URTS1 
+L27 Dvss DVSS AN27 UTXD1 
+
+
+RFICO BSI DO AB10 DVDD DVFS1 AN28 PCM SYNC 
+RFICO BSI CK AB11 DVDD DVFS1 AN29 PCM CLK 
+
+
+RFICO BSI Di AB12 DVSS AN30 DPI OUT24 
+VDDQ AB13 DVDD DVFS1 AN31 BPI OUT22 
+
+
+AUD DAT MISO AB14 DVDD DVFS1 AN32 BPI OUT20 
+AUD CLK MOSI AB15 DVDD_SRAM1 AN33 BPI OUT18 
+M4 | DVSS AB16 DVSS AN34 TN MEMPLLPOP 
+M5 PWRAP SPIO CK AB17 DVDD DVFS2 AP1 | .INC. | 
+PWRAP SPIO MI AB18 DVDD DVFS2 TP MEMPLL B 
+DVSS AB19 DVDD DVFS2 VDDQ 
+| M9 | DVSS AB20 DVDD DVFS2 DVSS 
+DVSS AB21 DVDD_DVFS2 VDDQ 
+DVDD_GPU AB22 DVSS SIM1_SRST 
+DVDD_GPU AB23 DVDD_CORE1 l280 BCK 
+DVDD GPU AB24 DVDD CORE! AP11 VDDQ 
+DVDD GPU AB25 DVSS AP12 VDD1 
+DVDD GPU AB26 DVSS AP14 VDDQ 
+DVDD GPU AB30 LTE TX BBQP AP15 TDN3 A 
+
+
+DVSS AB32 LTE RX2 BBIP AP17 VDDQ 
+DVDD CORE2 DPI D8 AP18 AVSS18 MIPITX 
+
+
+DVSS DPI D6 AP20 VDDQ 
+DVSS DPI D7 AP22 TDN1 
+DVDD CORE! VCC18IO DPI AP24 VDDQ 
+DVDD CORE! DVSS AP25 VCC18lO MC2 
+DVDD CORE! VCC18IO 1 AP27 VDDQ 
+DVSS DVDD DVFS1 AP28 VDD1 
+DVSS AC10 DVDD DVFS1 AP30 DPI OUT25 
+DVSS AC11 DVDD DVFS1 AP31 DPI OUT23 
+
+
+MediaTek Confidential € 2013 - 2014 MediaTek Inc. Page 23 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D A TEK Application Processor 
+
+
+Technical Brief 
+
+
+Confidential A 
+
+
+Ball Ball Ball 
+TD_RX_BBQP AC12 DVDD DVFS1 AP33 TP. MEMPLLPOP 
+ll LI AË 
+
+
+Table 2-2. Top pin coordinate 
+
+
+Ball Ball Ball 
+"NI DIS "eer (el vm 
+
+
+E EE EE 
+EC vob 
+
+
+ERN NN 
+[45 | Dën — | Hz | "EI IST DS — 
+
+
+A5 
+DQ27 A DQ18 A AJ34 DVSS 
+VDDQ DQ19 A DQ15 B 
+
+
+ee 
+[49 | mis LEI De (es mu 
+[. ONU 
+
+
+Dave A 
+vob 
+
+
+Das A 
+KREE EE 
+"Dm — 
+
+
+E 
+
+
+DQS1_T_A 
+"ml vwo DS 
+t 
+Das B 
+CAPOPU B 
+DOST E 
+roj oon — Fm | crore — ANE ar — 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 24 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+M f= D I/A TEK Application Processor 
+Technical Brief 
+Confidential A 
+
+
+Ball Ball Ball 
+
+
+ECH | VDDQ. | DAB | B TANTS | CAPOP8 A 
+— pss fas | Dus 
+
+
+za 
+vob 
+Pe a 
+CAPOPA B 
+[85 | es — —| Ui | PR — [ANZ | CSPOPLNA 
+[87 | Dën SI mz Im | — CAPOPRA 
+
+CSPOPI NE 
+RY Oa CNN E RES CUN 
+JEJ 
+
+"mr" 
+
+
+DQ13 . A VDDQ 
+Das0 T B 
+
+
+FRE] — ono —— 
+DOSA 
+a eee ae NR 
+EE 
+
+
+DR 
+
+
+D028 B 
+Boso B 
+
+
+ZGiA 
+CAPOPS A 
+
+
+CAPOPE_B 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 25 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Ball Ball Ball 
+VDD1 AD33 DVSS AP18 VDDQ 
+
+
+DQS2 C A AD34 CAPOP7 B AP19 CLKPOP T A 
+
+
+[oi [baie Il DER IT Pm | 
+
+
+D1 
+CAPOPS A 
+[Er | oes — | Az | Dang Is "oer —] 
+
+
+E1 
+vob 
+De 
+
+
+"ml Dn "mer D 
+AP34 DNU 
+cc 
+
+
+2.1.2 Detailed Pin Description 
+Table 2-3. Acronym for pin type 
+
+
+[ D | Dis | 
+[ DO | Daat | 
+"oo | igtabidrecion | 
+[ PR |  .  Pwe  ] 
+
+
+Table 2-4. Detailed pin description 
+
+
+"eren | Type] Desorption | Powerdoman | 
+
+
+SYSTEM 
+
+
+VCC1810 
+
+
+WATCHDOG VCC18lO 
+TESTMODE VCC18lO 
+SRCLKENAO VCC18lO 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 26 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+SRCLKENA1 | DIO _| 26MHz oo deck enable output ` VCC18IO 
+SRCLKENAI | DIO |26MHzco-clockenableinput | VCC18IO 
+SRCLKENAI | DIO | 26MHz co-clock enable input — | VCCIBIO 
+RTCS2K C [Di [32k clockinput ^ VCCIBIO 
+PWRAP SPIO CK VCC18lO 
+
+
+PWRAP SPIO CSN PMIC SPI control interface VCC18lIO 
+
+
+(oe 
+
+[ Do. 
+PWRAP SPO MI | DIO [PMiCSPlconrolmerare — | VCCIBIO 
+PWRAP SPI) MO | DIO [PMiCSPlconmonteface — | VCCIBIO 
+AUD CLK MOSI — | DIO | PMIC audio nputintertace — VCCIBIO 
+AUD DAT MISO | DIO |PMiCaudoinputinefae — VCCIBIO 
+AUD DAT MOSI — | DIO |PMiCaudoinputinefae — VCCIBIO 
+ANG_DAT_IN | DIO [PMiCaudoinputimefae — VCCIBIO 
+
+[ Dio [PMC audio input interfase — | VCCIBIO 
+
+
+SIM1 CLOCK CC18lO SIM/VCC3S3IO SIM1 
+
+
+CC18lO. SIM/VCC33IO. SIM? 
+CC18lO SIM/VCC33IO SIM1 
+VCC18lO SIM/VCC33IO SIM2 
+CC18lO SIM/VCC33IO SIM2 
+VCC18lO. SIM/'VCC33IO. SIM2 
+VCC18IO 
+VCCIBIO 
+
+JTAG 
+VCC18IO UART 
+JTDI VCCI8IO UART 
+JTDO VCCIBIO UART 
+TMS VCCIBIO UART 
+
+LCD 
+VCCiBIO UART 
+
+
+Parallel display interface reset signal VCC18lO UART 
+
+
+Gen DATA I2S bi-directional interfece 
+l280 LRCK I2S bi-directional interfece 
+12S bi-directional interfece 
+l283_DATAQ 
+I283 DATA I2S output 
+[2S output 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 27 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+ANC DAT OUT 
+
+
+SIM1 SCLK 
+SIM1 SIO 
+SIM1_SRST 
+SIM2_SCLK 
+SIM2_SIO 
+SIM2_SRST 
+NT_SIM1 
+NT_SIM2 
+
+
+< 
+
+
+i 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+1253_LRCK | DIO [12S output VCC1810_12S 
+1253_MCK | DIO [12S output VCC18lO ES 
+
+PCM/I2S merge interface 
+
+PCM CLK | DIO | PCM audio interface VCC18lO MC2 
+PCM RX | DIO | PCM audio interface VCC18IO_MC2 
+PCM SYNC | DIO | PCM audio interface VCC18IO MC2 
+PCM TX | DIO | PCM audio interface VCC1810 MC2 
+
+EINT 
+
+EINTO | DIO | External interrupt O CC18lO EINT/VCC28 EMD 
+EINT1 | DIO | External interrupt 1 CC18lO EINT/VCC28 EMD 
+EINT2 | DIO | External interrupt 2 CC18lO EINT/VCC28 EMD 
+EINT3 | DIO | External interrupt 3 CC18lO EINT/VCC28 EMD 
+EINT4 | DIO | External interrupt 4 CC18lO EINT/VCC28 EMD 
+EINT5 | DIO | External interrupt 5 CC18lO EINT/VCC28 EMD 
+EINT6 | DIO | External interrupt 6 CC18lO EINT/VCC28 EMD 
+
+EINT7 | DIO | External interrupt 7 CC18lO EINT/VCC28 EMD 
+
+
+Kata 
+
+
+< 
+
+
+EINT8 CC18lO EINT/VCC28 EMD 
+EINT9 CC18lO EINT/VCC28 EMD 
+EINTIO VCCIBIO CMR 
+ENT! VCCIBIO CMR 
+EINT12 VCCI8IO CMR 
+EINT13 VCC18IO CMR 
+ENTIA VCCIBIO CMR 
+EINTIS VCCIBIO CMR 
+
+
+VCC18lO 
+ES 
+SPLM VcCiBlo 
+SEL MO VCC8IO 
+ee ed 
+BPI_BUSO | DIO [BP Buso | 1 VCCt8lO BPI/CC28IO BPI 
+BPI_BUS1 | DIO | BPHBUS1 — . 1 VCCI8IO BPI/VCC28IO BPI 
+BPI_BUS2 | DIO | BPHBUS2. | VCCI8IO BPI/VCC28IO BPI 
+BPI_BUS3 | DIO | BPHBUS3. | VCCI8IO BPI/VCC28IO BPI 
+BPI_BUS4 | DIO |BPIT BUS . 1 VCC 1810_B PI/VCC2810_BPI 
+PP BUS5 | DIO | BPHBUSS | VCCI8IO BPI/VCC28IO BPI 
+BPI_BUS6 | DIO [BP Buse | VCCI8IO BPI/CC28IO BPI 
+PPI BUS7 | DIO | BPHBUS7.  . . | VCCI8IO BPI/VCC28IO BPI 
+| DO. 
+| DIO | 
+| DO. 
+| DIO | 
+| DIO | 
+| DIO | 
+
+
+< 
+
+
+SPI_CK 
+SPI_CS 
+
+
+< 
+
+
+BPI_BUS8 CC18lO BPI/VCC28IO BPI 
+PP BUS9 VCC18IO. BPI/VCC28IO BPI 
+BPI_OUT10 VCC18lO BPI 1 
+BPI_OUT11 VCC18IO BPI 1 
+PPI OUT12 VCC18IO BPI 1 
+PPI OUT13 VCC18IO BPI 1 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 28 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+< 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+[ bo enoma —— 4| VCCISIO E 
+[Do sous — — |  VCCIBO BPI2 
+[ po SPnoure —— | VCCIBO BPI2 
+[ po sour; —— | VCCIBO BPI2 
+BPI OUTIS [ po Bmouns | Wë EL 
+BPI OUTIS [Do |sourme ME EL 
+BPI OUT20 [ Do [eenouro |  VCCIBO BPI2 
+
+[ Dio. 
+
+(oe 
+
+"oe 
+
+[ Dio | 
+
+[ Dio | 
+
+IN 
+
+[ Dio | 
+
+
+BPI OUT14 
+BPI OUT15 
+BPI OUT16 
+BPI OUT17 
+
+
+BPI_OUT21 VCC1810_BPI_2 
+BPI OUT22 VCC18lO BPI 2 
+BPI_OUT23 VCC18lIO BPI 2 
+PPI OUT24 VCC18lIO BPI 2 
+PPI OUT25 VCC18lO BPI 2 
+VM 
+PAVMO VCCIBIO BPI 2 
+SR VCCIBIO BPl 2 
+EE MES 
+RFICO BSI DO | DIO |RFICOBSIDATAO | VCC18IO BPI 1 
+RFICO BSI Dt | DIO |RFICOBSIDATAL O sd VCC18lO BPI 1 
+RFICO BSI D2 | DIO |RFICOBSIDATA2 ` < < < ěž | VCC1810_BPI_1 
+RFICO_BSI_EN | DIO |RFICOBSICSO = VCC1810_BPI_1 
+RFICO_BSI_CK | DIO |RFICOBSICLK ` | VCC18lO BPI 1 
+RFIC1 BSI CK | DIO |RFICTBSICLIK | VCC18IO BPI 1 
+RFIC1 BSI DO | DIO !RFICTBSIDATAO | VCC18IO BPI 1 
+RFIC1 BSI D1 | DIO !RFICTBSIDATA1 ` — < < ćě | VCC1810_BPI_1 
+RFIC1 BSI D2 | DIO |RFIC1BSIDATA2 = č < < ž | VCC18IO BPI 1 
+| DO. 
+| DIO | 
+| DIO | 
+| DIO | 
+| DO. 
+| DIO | 
+| DIO | 
+| DIO | 
+
+
+RFIC1 BSI EN VCC18lO BPI 1 
+MISC BSI CK VCC18lO MD! 
+MISC BSI CSOB VCC18lO MD! 
+MISC. BSI CS1B VCC181O MI 
+MISC. BSI DI VCC18lO MD1 
+MISC BSI DO VCC18lO MD1 
+TD TXBPI VCC18IO BPI 1 
+LTE TXBPI VCC18IO BPI 2 
+MSDCO CLK | DO |MSDCOCLK — . JL — VCOOIBIOMCO | 
+MSbcocMD — bio |Msbcocwb — - — — (| —  VCCiBO MCO | 
+MSDCO. DATO | DIO |MSDCOdatadpin — | veau | 
+MSDCO. DAT! | DIO |MSDCOdatatpin | VCCiBIOMCO | 
+MSDCO DAT? | DIO |MSDCOdata2pin — |  — VCCIBIO MCO | 
+| DIO | 
+| DIO | 
+| DIO | 
+| DIO | 
+| DIO | 
+
+
+MSDCO DATA 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 29 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MSDCO DAT5 
+MSDCO DAT6 
+MSDCO DAT7 
+
+
+MSDCO DAT? MSDOO data3 pin VCC18lO MCO 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Description Power domain 
+MSDCO DSL | DIO |MSDCODSL ` VCCI8IO MCO 
+MSDCO RST | DIO |MSDCORST — — — ^ | VCC18IO MCO 
+MSDC1_CLK [ DIO [MSDGT clock ouput | VCCI8IO MC! 
+MSDCI. CMD | DIO |MSDCicommandpin | VCCT8IO MC1 
+
+MSDC1 DATO | DIO | MSDC1 data0 pin VCC18IO MC! 
+
+[ DIO | 
+[ DIO | 
+| DIO | 
+
+
+MSDC1_DAT1 VCC18IO MC1 
+MSDC1 DAT2 VCC18lO MO 
+MSDC1_DAT3 VCC18IO_MC1 
+MSDC2_CLK | DIO | MSDC2 clock output = | VCC18lO MC2/VCC33IO MC2 
+MSDC2 CMD | DIO |MSDC2commandpn | | VCC18lO MC2/VCC33IO MC2 
+MSDC2 DATO | DIO | MSDC2 data0 pin == | VCC18lO MC2/VCC33IO MC2 
+MSDC2 DAT | DIO |MSDC2datatpin |. | VCC18lO MC2/VCC33IO MC2 
+| DIO | | 
+| DIO | 
+
+
+MSDC2 DAT2 CC18lO MC2/VCC33lIO MC2 
+MSDC2 DAT3 CC18lO MC2/VCC33lIO MC2 
+MSDC3 CLK VCC18IO MC3 
+MSDC3 CMD VCC18lO MC3 
+MSDC3 DATO VCC18lO MC3 
+MSDC3 DAT1 VCC18lO MC3 
+MSDC3_DAT2 VCC18IO MC3 
+MSDC3 DAT3 VCC18lO MC3 
+CAM 
+VCC18I0 CMR 
+VCC18IO CMD 
+VCCIBIO CMR 
+VCCIBIO Op 
+12C 
+VCC18I0_CMR 
+VECTBIO_CMR 
+
+
+I2C1 clock VCC18lIO 
+
+
+I2C1 data VCC18lO 
+
+
+I2C2 clock VCC18IO CMR 
+VCC18lO CMR 
+I2C3 clock VCC18IO Gs 
+2C3 data VCC18lO Gs 
+
+UART 
+
+
+UCTSO | DIO | UARTOCTS VCC18IO UART 
+URTSO | DIO | UARTO RTS VCC181O UART 
+URXDO | DIO | UARTO RX VCC18lO UART 
+
+
+< 
+
+
+| DO 
+| DIO | 
+| DIO | 
+| DIO | 
+| DO. 
+| DIO | 
+CM2MCLK | DIO | 
+CM3MCLK | DIO | 
+CMMCLK | DIO | 
+CMPCLK | DIO | 
+SCLO | DIO | 
+SDAO | DIO | 
+SCL1 | DIO | 
+SDA1 | DIO | 
+SCL2 | DIO | 
+SDA2 | DIO | 
+SCL3 | DIO | 
+SDA3 | DIO | 
+
+
+UTXDO UARTO TX VCC18IO UART 
+UCTS1 UART1 CTS VCC18lO MC2 
+URTS1 UART1 RTS VCC18IO0_MC2 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 30 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+URXD1 | DIO | UART1 RX VCC18lO MC2 
+UTXD1 | DIO | UART1 TX VCC18lO MC2 
+URXD2 | DIO | UART2 RX VCC18lO0 CONN 
+UTXD2 | DIO | UART2 TX VCC18lO0 CONN 
+URXD3 | DIO | UART3 RX VCC1810 
+UTXD3 | DIO | UART3 TX VCC18IO 
+PTA RXD | DIO | UART PTA RDX VCC18IO CONN 
+PTA TXD | DIO | UART PTA TDX VCC18IO CONN 
+KeyPad 
+
+KPCOLO | DIO | Keypad COLO VCC18lO 
+
+KPCOL1 | DIO | Keypad COL1 VCC1810 
+KPCOL2 | DIO | Keypad COL2 VCC1810 
+
+
+KPROWO VCCIBIO 
+KPROW: VCCIBIO 
+KPROWA VCCIBIO 
+DDG [wo[ma — 5 — — — 7] VCCIBO 
+CONN RST [Do [ComedSVSHes: — | VGGIBIO CONN 
+GPS SYNC [wo [esse ^ | vecio CONN 
+DAICLK [ DO [DATAudiointertace — |. VGGI8IO CONN 
+DAIPCMIN [ Dio [DAI Aus interface — | —  VCCIBIO CONN 
+[ Dio [DAI Audio; 
+SR | 
+
+
+DAIPCMOUT DAI Audio interface VCC18IO CONN 
+DAISYNC DAI Audio interface VCC18IO_CONN 
+
+
+VCCIBIO DPi 
+VCCI8IO DPI 
+VCCI8IO DPI 
+VCCi8lo Gei 
+VCCIBIO DPi 
+VCC1810_DPI 
+VCC1810_DPI 
+VCO1810_DPI 
+VCO1810_DPI 
+VCC1810_DPI 
+VCC16I0_DFI 
+VCCi8lo DPi 
+VCCi8lo Gei 
+VCC1810_DPI 
+VCCi8lO DPi 
+EECH 
+ABB 
+AIO 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 31 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+DPI CK 
+
+DPI DO 
+
+DPI Di 
+
+DPI D2 
+
+DPI D3 
+
+DPI D4 
+
+DPI D5 
+
+DPI D6 
+
+DPI D7 
+
+DPI D8 
+
+DPI D9 
+
+DPI D10 
+DPI D11 
+DPI DE 
+
+DPI HSYNC 
+DPI VSYNC 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+AUXINO AVDD16 AP 
+AUXIN' AVDDI6_AP 
+AUXIN2 AVODIG AP 
+ETN AVDDI6 MD 
+ETP AVDDI8 MD 
+LTE FXI PER AVDDI6 MD 
+LTE FXI BBIP AVDDI6 MD 
+LTE RXi BBON AVDDI6 MD 
+LTE RXi BBQP AVDDI8 MD 
+LTE RX2 BBIN AVDDI6 MD 
+LTE RYX? BBIP AVDDI6 MD 
+LTE RX2 BBON AS MD 
+LTE RX? BBQP AVDDI8 MD 
+LTE TX BBIN AVDDI6 MD 
+LTE TX BBIP AVDDI6 MD 
+LTE TX BBN AVDDI6 MD 
+LTE TX BBOP AS MD 
+LTEX26M IN AVDDI6 MD 
+REFN AVODIG AP 
+REFP [ AIO [Positive reference port for internal circu | AVODI6 AP 
+| | 
+
+
+Pa 
+O 
+
+
+2 
+[e] 
+
+
+TD RX EEN TL AO |?ndmodemdowlnkiN | AVDDI8 MD 
+TD RX Er AVDDI6 MD 
+TD RX BBON AVDDI6 MD 
+TD RX BBaP AVDDI6 MD 
+TD TX BBIN AVDDI8 MD 
+TD TX BBIP AVDDI6 MD 
+TD TX BBON AS MD 
+TD TX BBaP AVDDI6 MD 
+"me IN | AVDDI8 MD 
+"MER 
+AVODI6_MIPIAXO 
+AIO AVODI6. MIPIRXO 
+A AVDDI6, MIPIRXO 
+AVDDI6, MIPIRXO 
+AIO AVDD16_MIPIRXO 
+AVOD6. MIPIRXO 
+AVDDI6, MIPIRXO 
+A AVDDI6, MIPIRXO 
+AVODI6. MIPIRXO 
+AVODI6. MIPIRXO 
+AIO AVDDI6. MEN 
+AVDD18_ MIPIRXI 
+AVDDI8. MEN 
+AIO AVDDI8. MEN 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 32 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+RCNA AVDD18. HERZ 
+RCPA AVDDI8_MIPIRX' 
+RDNIA AVDD18. MIPIRXi 
+RDPI A AVDD18. MIPIRXi 
+RDNO A AVDD18. MIPIRX: 
+RDPO A AVDD18_MIPIRX1 
+RCN_B AIO AVDD18 MIPIRX2 
+RCP B AVDD18 MIPIRX2 
+RDN1 B O AVDD18_MIPIRX2 
+RDPI B AVDD18_MIPIRX2 
+RDNO B AVDD18 MIPIRX2 
+RDPO B AIO AVDD18 MIPIRX2 
+SB 
+USB_DP_PO O AVDD33_USB 
+USB DM PO AVDD33 USB 
+USB DP Pi AVDD33 USB 
+
+
+USB DM P1 USB port1 D- differential data line AVDD33 USB 
+
+
+USB VBUS PO USB porto VBUS AVDD18 USB 
+
+
+USB output for bias current; connect with 
+USB VRT P1 5.11K 195 Ohm to GND AVDD18 USB 
+
+
+CHD DM PO BC1.1 Charger DM AVDD33 USB 
+CHD DP PO BC1.1 Charger DP AVDD33 USB 
+
+
+AIO | SSUSBRXDATA AVDD10 SSUSB 
+SSUSBRXDATA AVDD10 SSUSB 
+SSUSBTXDATA AVDD10 SSUSB 
+
+
+AVDD10 SSUSB 
+
+
+PSPS Sl] 
+
+
+PE Pa PE P 
+O 
+
+
+USB output for bias current; connect with 
+
+
+AIO | 511K 1% Ohm to GND 
+
+
+o 
+o 
+o 
+o 
+
+
+External resistor for DSIO bias 
+
+Connect 1.5K ohm 1% resistor to ground ENDO IE NETS 
+
+DSI1 lane3 N AVDD18_MIPITX2 
+AIO | DSI lane3 P AVDD18_MIPITX2 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 33 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+TDN2_A AIO AVDD18 MIPITX2 
+TDP2 A AVDD18_MIPITX2 
+TON À AVDD18 MIPITX2 
+TCP A AIO AVDD18 MIPITX2 
+TONi A AVDD18 MEI 
+TDP1 A AIO AVDD18 MIPITX2 
+TDNO A AIO AVDD18 MIPITX2 
+TOPO A AVDD18 MIPITX2 
+External resistor for DSI1 bias 
+
+VREA Connect 1.5K ohm 1% resistor to ground EE E 
+TN_ARMPLL AIO AVDD18 ARMPLL 
+TP ARMPLL AVDD18 ARMPLL 
+TN MEMPLL A AIO AVDD18 MEMPLL A 
+TP MEMPLL A AIO AVDD18 MEMPLL A 
+TN MEMPLL B AVDD18 MEMPLL B 
+TP MEMPLL B AIO AVDD18 MEMPLL B 
+TN MEMPLLPOP AVDD18 MEMPLLPOP 
+TP MEMPLLPOP AIO AVDD18 MEMPLLPOP 
+AVDD10 SSUSB 
+
+
+Analog power input 1.8V for AuxADC, 
+TSENSE 
+
+
+Analog power input 1.8V for MEMPLL 
+
+
+EH 
+SES 
+CR | 
+Ee | 
+ER | 
+[ P [AnsogpowerforMPICSI — | 
+ap MIPIRXt | P | Analog power tor mipres — | 
+AVDD16_MIPIRX2 | P [AnalgpowerterMPICS| — | 
+Avis Wem | P | Analog power for miPrDSI | 
+=a 
+EXE | 
+NM 
+CS 
+"E 
+EE | 
+DE 
+"E 
+"E | 
+Pu 7 
+[B 
+
+
+Power domain 
+| 
+
+
+AVDD18_AP 
+AVDD18_ARMPLL 
+AVDD18_MD 
+
+AVDD18 MEMPLL A 
+AVDD18 MEMPLL B 
+AVDD18 MEMPLLPO 
+
+
+AVDD18 MIPIRXO 
+
+
+AVDD16 MIPITx? 
+AVDD16 PLLGP 
+AVDD16 EELER 
+AVDD16 USB PO 
+AVDD18 USB P! 
+AVDD26_DAC 
+
+
+AVDD33 USB PO 
+AVDD33 USB P1 
+AVSS10 SSUSB 
+AVSS10 SSUSB 
+AVSS18 ARMPLL 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 34 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+
+
+Analog ground input 1.8V for BBTX, 
+BBRX 
+
+
+Analog ground input 1.8V for MEMPLL 
+
+
+AVSS18_MD 
+AVSS18 MEMPLL A 
+
+
+AVSS18 MEMPLL B | P | Analog ground input 1.8V for MEMPLL 
+AVSS18 MEMPLLPOP| P  |Analog ground input 1.8V for MEMPLL 
+AVSS18 MIPIRX | P | Analog ground for MIPI CSI 
+AVSS18 MIPITX | P_ | Analog ground for MIPI DSI 
+AVSS18 PLLGP | P| Analog ground input 1.8V for PLL 
+AVSS33 USB PO | P  |Analog ground 3.3V for USB 
+AVSS33 USB P1 | P | Analog ground 3.3V for USB 
+DDR Power 
+
+DDRV A | P | DRAM 1O power 
+DDRV B | P | DRAM 1O power 
+DDRVPOP | P_ | DRAM UO power 
+EXTDN A | | DRAM REXTDN pin 
+VBIASN1_A | P |DRAM VBIASN power 
+VBIASN1 B | P |DRAM VBIASN power 
+VBIASNPOP | P |DRAM VBIASN power 
+VDD1 | P_ | DRAM VDD1 core power 
+VDDQ | P | DRAM 1O power 
+VREF(CA) . | P_ | DRAM VREF(CA) power 
+
+DRAM VREF(CA) power 
+
+
+DRAM VREF(DQ) power 
+DRAM VREF(DQ) power 
+
+
+DRAM VREF power 
+DRAM VREF power 
+
+
+DRAM channel A reference pin O for 
+output drive strength calibration 
+
+
+DRAM channel B reference pin O for 
+output drive strength calibration 
+DRAM channel A reference pin 1 for 
+output drive strength calibration 
+DRAM channel B reference pin O for 
+output drive strength calibration 
+DDR IO 
+
+CAPOPO A DRAM channel A address output 0 DDRVPOP 
+
+CAPOP1 A DRAM channel A address output 1 DDRVPOP 
+
+CAPOP2 A DRAM channel A address output 2 DDRVPOP 
+
+CAPOP3 A DRAM channel A address output 3 DDRVPOP 
+
+
+IN 
+[Do 
+[ Dio | 
+"oe 
+CAPOPA A [ DIO [DRAM channel A address outputa | DDRVPOP — | 
+CAPOPS A [ DIO [DRAM channel A address outputs |  DDRVPOP — | 
+
+"oe 
+
+(oe 
+
+[ Dio | 
+
+[ Dio | 
+
+
+CAPOP6_A 
+CAPOP7_A 
+CAPOPB A 
+CAPOPO A 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 35 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+[  Pnmame | Type |Description | Powerdomain | 
+CKEPOPO A | DIO | DRAM channel A command output CKE 0 DDRVPOP 
+CKEPOP1 A | DIO | DRAM channel A command output CKE 1 DDRVPOP 
+CLKPOP C A | DIO | DRAM channel A clock 0 output DDRVPOP 
+CLKPOP T A | DIO | DRAM channel A clock 0 output # DDRVPOP 
+CSPOPO N A | DIO | DRAM channel A chip select 0 # DDRVPOP 
+CSPOP1 NA | DIO | DRAM channel A chip select 1 # DDRVPOP 
+DQ0O A | DIO | DRAM channel A data pin 0 DDRV A 
+DQ1 A | DIO | DRAM channel A data pin 1 DDRV A 
+DQ10 A | DIO | DRAM channel A data pin 10 DDRV A 
+DQ11 A | DIO | DRAM channel A data pin 11 DDRV A 
+DQ12 A | DIO | DRAM channel A data pin 12 DDRV A 
+DQ13 A | DIO | DRAM channel A data pin 13 DDRV A 
+DQ14 A | DIO | DRAM channel A data pin 14 DDRV A 
+DQ15 A | DIO | DRAM channel A data pin 15 DDRV A 
+DQ16 A | DIO | DRAM channel A data pin 16 DDRV A 
+DQ17 A | DIO | DRAM channel A data pin 17 DDRV A 
+DQ18 A | DIO | DRAM channel A data pin 18 DDRV A 
+DQ19 A | DIO | DRAM channel A data pin 19 DDRV A 
+DQ2 A | DIO | DRAM channel A data pin 2 DDRV A 
+DQ20 A | DIO | DRAM channel A data pin 20 DDRV A 
+DQ21 A | DIO | DRAM channel A data pin 21 DDRV A 
+DQ22 A | DIO | DRAM channel A data pin 22 DDRV A 
+DQ23 A | DIO | DRAM channel A data pin 23 DDRV A 
+DQ24 A | DIO | DRAM channel A data pin 24 DDRV A 
+DQ25 A | DIO | DRAM channel A data pin 25 DDRV A 
+DQ26 A | DIO | DRAM channel A data pin 26 DDRV A 
+DQ27 A | DIO | DRAM channel A data pin 27 DDRV A 
+DQ28 A | DIO | DRAM channel A data pin 28 DDRV A 
+DQ29 A | DIO | DRAM channel A data pin 29 DDRV A 
+DQ3 A | DIO | DRAM channel A data pin 3 DDRV A 
+DQ30 A | DIO | DRAM channel A data pin 30 DDRV A 
+DQ31 A | DIO | DRAM channel A data pin 31 DDRV A 
+DQ4 A | DIO | DRAM channel A data pin 4 DDRV A 
+DQ5 A | DIO | DRAM channel A data pin 5 DDRV A 
+DQ6 A | DIO | DRAM channel A data pin 6 DDRV A 
+DQ7 A | DIO | DRAM channel A data pin 7 DDRV A 
+DQ8 A | DIO | DRAM channel A data pin 8 DDRV A 
+DQ9 A | DIO | DRAM channel A data pin 9 DDRV A 
+DQMO A | DIO | DRAM channel A DOM 0 DDRV A 
+DOM! A | DIO | DRAM channel A DOM 1 DDRV A 
+DQM2 A | DIO | DRAM channel A DOM 2 DDRV A 
+DQM3 A | DIO | DRAM channel A DOM 3 DDRV A 
+DQS0 C A | DIO | DRAM channel A DQS 0 DDRV A 
+DQSO0 T A | DIO | DRAM channel A DOS 0 # DDRV A 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 36 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+AVI f= D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+"Borne | Type | Description | Powerdomain | 
+DQS1_C_A | DIO | DRAM channel A DOS 1 DDRV A 
+DQS1 T A | DIO | DRAM channel A DGS 1 # DDRV A 
+
+
+[ DIO [DRAM channel B address output — | 
+[DIO DRAM channel B address output 1 — | 
+[ DIO [DRAM channel B address output? — | 
+[ DIO [DRAM channel B address ouput3 | 
+[ DIO [DRAM channel B address output 4 
+[ DIO | DRAM channel B address output — | 
+DIO“ [DRAM channel B address output — | 
+DIO“ [DRAM channel B address ouput 7 — | 
+DIO“ [DRAM channel B address ouput8 | 
+[ DIO [DRAM channel B address output 9 | 
+[ DIO [DRAM channel B command output CKE 0| 
+[ DIO [DRAM channel B command output CKE 1| 
+DIO“ [DRAM channel B clock O output | 
+DIO DRAM channel B clock O output | 
+DIO“ [DRAM channel B chip select 0# — | 
+DIO“ [DRAM channel chip select 1# — | 
+DIO“ [DRAM channel B data pino — | 
+DIO DRAM channel B data pint — | 
+DIO“ [DRAM channel B data pn 10 — | 
+[ DIO [DRAM channel B data gen 
+DIO“ [DRAM channel B data pn 12 — | 
+DIO [DRAM channel B data pn 18 — | 
+DIO“ [DRAM channel B data gn 
+[ DIO [DRAM channel B data pn 15 — | 
+[ DIO [DRAM channel B data ag — | 
+[ DIO [DRAM channel B data pn 17 | 
+— DIO | DRAM channel B data pin 18 — | 
+DIO“ [DRAM channel B data pn 19 — | 
+[ Dio [DRAM channel B data pin? — | 
+[ DIO [DRAM channel B data ar? 
+DIO DRAM channel B data ge? 
+[ DIO [DRAM channel B data gr? | 
+— DIO [DRAM channel B data gr? — | 
+[ DIO [DRAMchameBdatapin2é — | 
+[ DIO [DRAM channel B data pn 25 — | 
+DIO [DRAM channel B data pin 26 | 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 37 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Power domain 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+
+
+DQ27 B 
+DQ28 B 
+DQ29 B 
+DQ3 B 
+DQ30 B 
+DQ31 B 
+DQ4 B 
+DQ5 B 
+DQ6 B 
+DQ7 B 
+DQ8 B 
+DQ9 B 
+DQMO B 
+DOMI B 
+DQM2 B 
+DQM3_B 
+DQSO C B 
+DQSO T B 
+DOS! C B 
+DOS! T B 
+DQS2 C B 
+DQS2 T B 
+DQS3 C B 
+
+
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DDRV B 
+DOSS T DDRV B 
+ODT 8 DDRV B 
+DVDD_CORET LE [bigis LOV power inputforcore — | 
+DVDD CORE2 | P| Diotal 10V power inputtorcore — | 
+DVDD DvrS: | P| Digital 10V power inputtorcore | 
+DVDD DvFs2 | P| Digtal 10V power input for core | 
+DVDD GPU [ P [Digta 1.0V power input for core 
+"E 
+[5 
+
+
+4 
+< 
+ke 
+
+© 
+
+
+DVDD SRAMI 
+DVDD_SRAM2 
+DVDD18_EFUSE 
+DVNWBIAS 
+ae 
+SEN [Digital LBV power enker | = 
+VCCIBIO j Dg 1.8V powerinputtorio — |  - | 
+VCCIBIO BP Digtal 1.8V powerinputtorBP | = | 
+[Digital 1.8v powerinputtorBP 1 
+
+i i EE NN 
+
+
+Digital 1.8V power input for Camera 
+Digital 1.8V power input for CONN 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 38 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+Digital 1.8V power input for BPI 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+"Bomen | Type | Description | Powerdomain | 
+VCC18I0_DPI | _P__| Digital 1.8V power input for DPI Po 
+VCC18lO EINT | P [Digital 1.8V power input for EINT m O O 
+
+
+[voto gs | P [DgiiTSVpowerimputorbS | = — 
+[coto Mco | P [DigtsTSVpoweriputor MDCO | — — 
+[vcio wc: — | P [Dita tSVpoweriputorMSDO! — | —  ——- — 
+[cci wca | P | Digtal TSVpoweriutorMSDCa — | — — =- — 
+
+
+[vecas EMD | P| Digital. 3VpowerinputtorEINT — | = — | 
+ween BPI — | P [Digta3sVpowripuor&e | = | 
+vccasio MCi — | P [DigtaSsVpowripuorMSDO! — | = — | 
+vccasio ce | E |DigtassvpowripuorMSog — | — =- | 
+vccasio Siw — | E |DigtassVpowripuorSM! — | = | 
+
+
+VCC33IO. SIM2 P Digital 3.3V power input for SIM2 - 
+
+
+VCC18lO MC3 | P | Digital 1.8V power input for MSDC3 m | 
+VCC18lO. UART | P | Digital 1.8V power input for UART Pe 
+
+
+VCC18IO MD1 | P | Digital 1.8V power input for MD1 Pe 
+VCC18I0_SIM | _P__| Digital 1.8V power input for SIM Po 
+
+
+2.2 Electrical Characteristic 
+
+
+2.2.1 Absolute Maximum Ratings 
+
+
+Table 2-5. Absolute maximum ratings for power supply 
+
+
+| SymbolorPinname | Description ` ` Min. | 
+
+1.15 
+1.15 
+1.15 
+1.15 
+1.15 
+1.15 
+1.15 
+3 
+
+0 
+Wee ee ME NU 
+
+1.98 
+
+
+2 
+VCC1810_1 Digital 1.8V power input for IO 1.98 
+VCC18IO BP Digital 1.8V power input for BPI 1 
+
+7 
+
+
+3 
+5 
+9 
+
+
+1.98 
+
+
+VCC18lO BPI 2 Digital 1.8V power input for BPI 1.98 
+VCC18IO_CMR Digital 1.8V power input for Camera 
+
+
+VCC18IO_CONN Digital 1.8V power input for CONN 
+VCC18I0_DPI Digital 1.8V power input for DPI 1.95 
+VCC18IO_EINT Digital 1.8V power input for EINT 1.9 
+
+
+VCC18IO BPI 1 Digital 1.8V power input for BPI 1.62 1.98 
+
+
+A 
+GO 
+[o9] 
+
+
+MediaTek Confidential € 2013 - 2014 MediaTek Inc. Page 39 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+[Symbol or Pin name | Description We | Mex | Um | 
+[Vocimo ps | Dialal BV power input ore äs | 198 | v — 
+Fvoorsio mco | Digital TV powerinputfor MSDCO Is | 195 | v | 
+Fvoorsio Mci | Digia T8V powerinput or WSDOT | 17 | 38 | v 
+VCC1810_MC2 
+VCC1810_MC3 
+VCC1810_MD1 
+VCC1810_S1M 
+VCC1810_UART 
+VCC2B EMD 
+VCCABNO E 
+VCC3SIO MG: 
+VCCGSIO MC? 
+VCC33IO SIMI 
+VCC33IO SIM? 
+AvDD10 SSUSB — Amaogpower ——  — —]| oo | 34 ] 
+AVDD16 AP 
+AVDD18 ARMPLL 
+AVDD18 MD 
+AVDD18 MEMPLL. A 
+AVDD18 MEMPLL B 
+AVDD18 MEMPLLPOP 
+AVDD18. MIPIRXO 
+AVDD18 MES 
+AVDD18 MES 
+AVDD18 MEN 
+AVDD16 MIPITX? 
+AVDD18 PLLGP 
+AVDD18 EELER 
+AVDD18 USB PO 
+AVDD18 USB Pi 
+AVDD28 DAC 
+AVDD33 USB PO 
+AVDD33 USB P1 
+DDRV A 
+DDRV B 
+DDRVPOP 
+VBIASNT A 
+VBIASNI B 
+VBIASNPOP 
+VDDi 
+VDDQ 
+VREF(CA)_A DRAM VREF(CA) power | 0.588 | 0612 | v | 
+VREF(CA) B DRAM VREF(CA) power | 0588 | 0612 | v | 
+
+
+<|<|< 
+
+
+< 
+
+
+< 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 40 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+
+
+Confidential A 
+
+
+Symbol or Pin name | Description — | mn [ Max | Um | 
+DRAM VREF (DO) power 
+
+
+Warning: Stressing the device beyond the absolute maximum ratings may cause permanent damage. 
+These are stress ratings only. 
+
+
+2.2.2 Recommended Operating Conditions 
+
+
+Table 2-6. Recommended operating conditions for power supply 
+
+
+Symbol or pin name | Description | min. | Wyp. | Mex | Umt | 
+[DVD COREi — | Diglal TOV powerinputtorcore | 081 [11 | 14 | V 
+[DVD COREZ | Digte 10V powerinputtorcore — | 081 [112 | 118 | v 
+[DVOD DVESi — — [DigiarinVpowermpurtorcoe — | 072 | 11 | 135 | v 
+[DVOD DVESZ — — [DigiainVpoweriputorcoe — — | 072 | 1:25 | 118 | v 
+[DVOD GPU [Digital 0V powerinputtorcore — — | 081 | 1-325 | 118 | v 
+[DVD SRAWI | Digia 10V powerinput terore — | 08r | 11 | 135 | v 
+[DVD SRAWZ | Digte iOVpowermpurorcoe — — | 08r | 1:25 | 148 | v 
+[Vobis EFUSE — EFüSE poer o 12 | 38 | 33 | Y -] 
+[wes eem — — — — fo 1-9 [|o] 
+Deem — —  oigrisVpowermputorio — — | 317 | 38 ] 188 | Y .] 
+Doemer? [Digital BV powerinputtor1O — — | 317 | 38 | 188 | Y .] 
+Doemer BPI — Dig iSVpowerputtorPl — | 17 | 18 | 18 | Y | 
+Doemer BPI DigiariSVpoweripurtorBeI | 317 | 38 ] 198 | "Y 
+Doemer? | Digte 18V powerin orBP — | 317 | 38 | 188 | v 
+[VCCiBIO CONN — DigiaiSVpoweripuforCONN — | 317 | 38 | 198 | Y .] 
+[vecio DPI — — [DigiariSVpoweriputoreI — | 317 | 38 ] 185 | "Y .] 
+[VCCIBIO ENT | Digia 18V powerin rE — | 317 | 38 | 38 | Y .] 
+[VCCIIO Mer — — [DigiariSVpoweripurforMSOGi | 317 | 38 | 18 | v 
+[vecio Mee — — [DigiarisVpowermpurtorMSOCg | 317 | 38 | 18 | v 
+[VOCI SIM | Dige 18V powerin rS M — —| 317 | 38 | 18 | v 
+[VCCIBIO UART | Digia 18V powerinputtorUAAT — | 317 | 38 ] 388 | Y —] 
+3.6 
+
+
+2 3.3 
+VCC28 EMD Digital 3.3V power input for EINT NINE NE. 
+VCC28IO Bn Digital 3.3V power input for BPI i 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 41 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+44944494494 44° 
+
+
+<< 
+
+
+` {4 
+
+
+i 4 
+
+
+< 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Symbol or pin name | Description —  [ mm | 
+
+
+[T BC WE 
+VCC33IO MC1 Digital 3.3V power input for MSDC1 CS 
+EE EE 
+
+
+VCC33lO MC2 Digital 3.3V power input for MSDC2 
+
+
+Sea 
+E EE 
+VCC33I0_SIM1 Digital 3.3V power input for SIM1 
+(eet [pene JEE 
+Se 
+
+
+VCC33IO. SIM2 Digital 3.3V power input for SIM2 
+
+
+[AIDS ere — Amkgpower — — — — — | 988 | 30 ] 355 | Y .] 
+[ADT AP Amgpwer on | 38 ] 38 | Y -] 
+ADDS ARMEL [Analog power — — — — — | 171 | 38 ] 18 | v —] 
+[ADT MD [Analog power — — JI 
+AVDDTS-MEMPLL A [Analog power — — — — | 171 | 38 ] 18 | Y —] 
+AVDDTS MEMPLL B [Analog power [on [ 38 | 389 
+AVDDTE-MEMPLLPOP [Analog power — — — — | 171 | 38 ] 388 | Y —] 
+AVDDTS MPIRX) [Analog power m 
+AVDDTE MPR — [Amabgpower — — — — — | 171 | 38 ] 38 | Y -] 
+AVDD MPRE [Analog power — — — — — 371 [ 18 389 
+oDe MeN — [Amabgpower on | 38 ] 38 | Y -] 
+mmm MID [Analog power — — — — — 37 
+[ADT PLLGP — Amgpwer — — — — — | 371 | 38 ] 38 | Y -] 
+[AVDDTS SSUSE — Amgpower — — — — — | 371 | 38 ] 38 | Y -] 
+Dune a — c Su ce] e E 
+UNDE DAC [Anata poner fee 8 zw | V — 
+
+
+AVDD33 | USB PO Analog power 3.135 
+AVDD33 USB P1 Analog power 3.135 
+
+
+Powa [Pwo — — — — — $44 | 32 | 33 | V — 
+WEE apice] owed 
+| eee OUR I 
+Den — | DRAMVBIASN power — — —[ 92 | 02 | 02 v] 
+Ee 
+[VREFICALA — — [DRAMVREFCA power — — — | os me |oo | v | 
+[VREF(CA)B —— |URAMVREF(CA)power — | 0588 | 06 | osr | v | 
+eet? [DRAM VREFDQ) power | os% | oe | 0612 | 
+
+VREF(DQ) B DRAM VREF(DQ) power | 0588 | 0.6 | 0.612 | 
+[VREF A —  [DRAMVREFpowr | oses | 96 [osr | V — 
+[ver B [ORAWVREFpowe — [| 058 | oe [oem | v | 
+
+
+<| <| <| <| <| <| <| <| <| <| <| <| <| <| <| <| <| <| <| < 
+
+
+<| < 
+
+
+i HH 
+
+
+M 
+
+
+< 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 42 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2.2.3 Storage Condition 
+
+
+1. Shelf life in sealed bag: 12 months at < 40°C and < 90% relative humidity (RH). 
+2. After bag opened, devices subject to infrared reflow, vapor-phase reflow, or equivalent processing 
+must be: 
+e Mounted within 168 hours at factory conditions of < 30°C/60% RH, or 
+e Stored at < 20% RH. 
+3. Devices require baking, before mounting, if: 
+e 192 hours at 40°C +5°C/-0°C and < 5% RH for low temperature device containers, or 
+e 24 hours at 125°C +5°C/-0°C for high temperature device containers. 
+
+
+2.2.4 AC Electrical Characteristics and Timing Diagram 
+
+
+2.2.4.1 External Memory Interface for LPDDR3 
+
+
+The external memory interface, shown in Figure 2-3, Figure 2-4 and Figure 2-5, is used to connect 
+LPDDR3 device for MT6595. It includes pins CLK T, CLK C, CKE[1:0], CS[1:0], DQS[3:0], DQS#[3:0], 
+CA[9:0] and DQ[31:0]. Table 2-7 summarizes the symbol definition and the related timing 
+specifications. 
+
+
+TO T3 T2 T3 
+ckwukKc]l | | 1l] |] fF 4 | 
+
+i = iei lech cl ln 
+
+| | 
+
+| ‘tiscs fincs fiscg fincs: 
+
+
+CS_n 
+
+
+L i 
+Aeon WE Af 
+CAQ-9 | c. | on E 
+
+
+A 
+ise Oo Fall 
+
+
+E ors 
+
+À Fall Do 
+Ha 
+
+i D 
+
+
+A 
+A 
+
+
+[Cmd] 4 Nop K Command H Nop A Command }— 
+E ~ ~H m omg 
+
+
+Figure 2-3. Basic timing parameter for LPDDR3 commands 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 43 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED I A TE K Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+wen | | | 
+
+
+| 
+2 : 1 ! 1 
+(Cmq A wie no (oo ) 
+
+
+Case 1: with ‘pss (max) 
+
+
+DQS c 
+past 
+
+
+DQs 
+
+
+f. 
+
+
+- 
+H n 
+i] 
+ü H 
+
+
+Figure 2-4. Basic timing parameter for LPDDR3 write 
+
+
+L 
+
+e ind 
+d 
+um 
+7 Wild, 
+
+
+RL * BL/2 
+
+
+DQS c ZZLLLLATLTLT, 
+=I ee 
+DOS t ATI TT, 
+
+
+M P B LL LL LEE 
+P P B P B B s 
+PL SAL LL EL: 
+
+
+p B B SL LE Lg P LLL LS. 
+a Bg B B B B B Bg B Bg gg gg gg gg gg gg P gg go 
+Lu S S RS B Bg Bg Bg Bg Bg Bg Bg gg gg gg gg gg gg gg LEFF, 
+
+
+LI 
+
+
+El Transitioning data 
+
+
+Figure 2-5. Basic LPDDR3 read timing parameter. 
+
+
+Table 2-7. LPDDR3 AC timing parameter table of external memory interface 
+
+
+EE 
+
+
+DQ & DM input setup time 
+
+
+tCK 
+Clock low level width 
+DQ & DM input hold time 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 44 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+AVI f= D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+tDIPW DQ and DM input pulse width 
+
+
+ER 
+GE to 1* DOS latching 
+[oss _—_[Dastating ease a | Le 
+[OSH | Dastating eeoeraaimeramek | 2 JI Le 
+mer Ieren LLJ Le 
+WPRE[Weepeambe lm LI OR 
+[ick ` [Adsress &contorinputseupime | 28 II Is 
+me ` [Adsress &contorinputragine | 25 | Is 
+[scs ` [CS_inputseuptme JL 25 | rs 
+S 
+men | Aasress and corwolnoupusewan | os | | Le 
+
+( 
+
+
+ICKE CKE minimum pulse width (HIGH and max(7.5ns, Se 
+LOW pulse width) 3tCK) 
+
+
+D K(MIN 
+tLZ(DQS) DQS low-impedance time from CK/CK' i pe : BEEN 
+AT f , tDQSCK 
+tHZ(DQS) DQS high-impedance time from CK/CK (MAX) — 0.1 
+D K(MIN 
+tLZ(DQ) DQ low-impedance time from CK/CK’ à Ke : 
+
+
+tDQSCK(MAX) 
+tHZ(DQ) DQ high-impedance time from CK/CK' t (1.4 x 
+tDQSQ(MAX)) 
+
+
+| 
+
+
+in(tQSH, 
+tQH DQ/DQS output hold time from DQS ee 
+Max(10tCK, 
+MODE register Write command period = e 
+
+
+MODE register Read command period 
+Mode register set command delay Max(10tCK, 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 45 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MEDIATEK 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+Application Processor 
+Technical Brief 
+Confidential A 
+
+
+[Sm | — wee TI me | wm [uw 
+E Lo IL 
+~ fe 
+~ fe 
+
+
+E 
+MEDE 
+
+
+tRPRE Read preamble | 09 | | 
+
+
+tRPST Read postamble 
+( 
+
+
+Max(42ns, 
+tRAS ACTIVE to PRECHARGE command period e e. 
+
+
+tRAS + 
+tRPab (with 
+all-bank pre- 
+
+charge) 
+
+tRAS + 
+tRPpb (with 
+per-bank pre- 
+
+charge) 
+
+
+— AUTO REFRESH to ACTIVE/AUTO a 
+REFRESH command period 
+Max (18ns, 
+tRCD ACTIVE to READ or WRITE delay d 
+8ICK) 
+Max (18ns, 
+tRPpb Row PRECHARGE Time (single bank) aa lane 
+3tCK) 
+Max (21ns, 
+tRPab Row PRECHARGE Time (all banks ERES 
+8ICK) 
+Max(10ns, 
+tRRD ACTIVE bank A to ACTIVE bank B delay pc: 
+2tCK) 
+] Max(15ns, 
+WR WRITE 
+t recovery time AICK) 
+
+
+Max(7.5ns, 
+4tCk) 
+
+
+Max (tRFCab 
++ 10ns, 
+21CK) 
+
+
+(XP EXIT power down to next valid command Max(7.5ns, 
+delay 3tCK) 
+
+
+tREFW Refresh Period Po 
+tRFCab Refresh Cycle time 
+tRFCpb Per Bank Refresh Cycle time | 8 ` 
+
+
+Internal READ to PRECHARGE command Max(7.5ns, 
+delay 4tCk) 
+
+
+tCCD CAS-to-CAS delay 
+
+
+ACTIVE to ACTIVE command period 
+
+
+tWTR Internal write to READ command time 
+
+
+SELF REFRESH exit to next valid 
+command 
+
+
+tRTP 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. 
+
+
+Page 46 of 73 
+
+
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MEDIATEK 
+
+
+2.3 System Configuration 
+
+
+2.3.1 Mode Selection 
+
+
+Table 2-8. Mode selection of chip 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+Application Processor 
+Technical Brief 
+Confidential A 
+
+
+| Pinname |  — Desgtëten ———— | 
+
+
+KP COLO e Weg USB download without battery 
+
+
+KP_ROWO Se USB download without battery 
+
+
+2.3.2 Constant Tied Pins 
+
+
+Table 2-9. Constant tied pins of chip 
+
+
+TESTMODE Test mode (tied to GND) 
+
+
+2.4 Power-on Sequence 
+
+
+The power-on/off sequence with XTAL is shown in the following figure: 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. 
+
+
+Page 47 of 73 
+
+
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+MT6331 
+MT6332 ee 
+1T633 ap Teddy 
+bandgap ready Main chip 
+l 4ms j 
+EXT_PMIC_EN l DIGI8 ready l 
+Internal Pull low | 10ms I 
+(input mode) l Efuse ready [ 
+Í p I 
+l VBATISms ! 
+| UVLO on ! 
+32V d 
+| Y I 
+| Power on condition 1 
+l LPWRKEY low(debounced 50ms ) 1 
+| 2.PWBB on 1 
+| | 
+| i | 
+PP_EN high H 
+Mg cd = ——À I 
+l l 
+T i ] 
+2ms 
+bandgap ready u | 
+2mS I ! 
+DIGI8 ready | ! 
+Zug l 2ms ! 
+M3. EN l 12M OSC_EN/IVGEN l 
+| 2ms l 
+l Vcorel/Vcore2 l 
+l 2ms l 
+l VGPU Power off 1 
+| 2ms (power not good) I 
+l VIOI8 l 
+l 2ms ! 
+l VUSB(USB11) ! 
+| 2ms l 
+| VEMC3V3 / VM_Trapping l 
+l 2ms | 
+| VIO28/ VBIASN_DDR3 ! 
+l 2ms l 
+l STRUP_EXT_PMIC_EN l 
+| l 
++ | 
+A 
+| | 
+l EXT_PMIC_EN 1 
+f (output mode) | 
+I I 
+Sr T I 
+l | 
+0.8mS | e 1 
+EXT PMIC EN | is I 
+Y A 
+No if 4ms I 
+l EXT_PMIC_EN 1 
+I (input mode) I 
+F (28mS)efuse | I 
+Ready? | | 
+| 1 
+l | 
+EXT_PMIC_EN l l 
+Internal Pull high l I 
+(input mode l l 
+P ul i YES, 1 
+I | 
+| 1 
+| | 
+l j 
+l | 
++ I 
+| | 
+I 2ms I 
+l (VDVFS1) (unused) [ 
+I 2ms I 
+> l VSRAM_DVFSI 1 
+12M OSC_EN/IVGEN | dur i 
+T | VAUXA32 I 
+VDVFS2 | AVDD32_AUD(VAUD32) I 
+ams ee | Jii i 
+VSRAM_DVFS2 | Des? i 
+2ms i i 
+VDRAM/VREF_DDR3/ | i i 
+VREF_DDR3_CA/ | i 
+VREF_DDR3_DQ j 2ms ! 
+2 i VMC/VMCH Í 
+VUSB33/VAUXB32 | i i 
+] 50ms [ 
+s RESETB release 
+RESETB release i 
+A Y 
+Boot 
+
+
+Figure 2-6. Power on/off sequence with XTAL 
+
+
+2.5 Analog Baseband 
+
+
+2.5.1 Introduction 
+
+
+To communicate with analog blocks, a common control interface for all analog blocks is implemented. 
+In addition, there are some dedicated interfaces for data transfer. The common control interface 
+translates the APB bus write and read cycle for specific addresses related to analog front-end control. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 48 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+During the writing or reading of any of these control registers, there is a latency associated with the 
+transfer of data to or from the analog front-end. Dedicated data interface of each analog block is 
+implemented in the corresponding digital block. An analog block includes the following analog 
+functions for the complete GSM/GPRS/WCDMA/LTE base-band signal processing: 
+
+
+Base-band Rx: For I/Q channels base-band A/D conversion 
+
+Base-band Tx: For WO channels base-band D/A conversion and smoothing filtering 
+
+ETDAC: A DAC output to control buck-converter for envelop tracking technique. 
+
+RF control: Two DACs for automatic power control (APC) is included.The outputs are provided to 
+external RF power amplifiers respectively. 
+
+Auxiliary ADC: Provides an ADC for the battery and other auxiliary analog functions monitoring. 
+
+Clock generation: One clock-squarer for shaping the input sinwave clock and 20 PLLs providing clock 
+
+signals to base-band TRx, DSP, MCU, USB, MSDC units. 
+
+
+2.5.2 Features 
+
+
+The analog blocks include the following analog functions for complete GSM/GPRS/WCDMA base- 
+band signal processing: 
+
+
+= [TE BBRX 
+= TD BBRX 
+=  BBTX 
+
+= ETDAC 
+
+= APC-DAC 
+=  AUXADC 
+
+
+= Phase locked loop 
+= Temperature sensor 
+
+
+2.5.3 Block Diagram 
+2.5.3.1 LTE_BBRX 
+
+
+2.5.3.1.1 Block Descriptions 
+
+
+The receiver (Rx) performs baseband UO channels downlink analog-to-digital conversion: 
+
+1. Analog input multiplexer: For each channel, a 2-input multiplexer is included. 
+
+2. A/D converter: 4 high performance sigma-delta ADCs perform I/Q digitization for further digital 
+signal processing. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 49 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+A E D l A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Thermometer 2's complement 
+
+
+(fs) (fs) Main path 
+
+
+| BBIP DH 
+BIN LT zT AX b | 
+M: Modulator | Encoder Wi 
+| | 
+
+
+] 
+| | : 
+= AX 8 
+Modulator | Encoder [4 
+zLJ x | | 
+i Modulator | Encoder Fett S 
+
+
+E me AX E | SÉ 
+ome Modulator | Encoder t DOUT _Q213:0 
+M2 FI- 
+
+
+Figure 2-7. Block diagram of LTE_BBRX-ADC 
+
+
+2.5.3.1.2 Functional Specifications 
+See the table below for the functional specifications of the base-band downlink receiver. 
+
+
+Table 2-10. Baseband downlink specifications 
+
+
+Parameter 
+
+
+Differential analog input voltage (peak-to- 
+peak) 
+
+
+Common mode input current magnitude 
+Common mode input voltage 0.65 
+
+
+— Clock rate (DC mode) 
+— Clock rate (SC mode & GSM mode) 
+
+
+Input clock duty cycle 49.5 % 
+
+
+Input clock frequency 
+— Clock rate (LTE HB mode) 
+— Clock rate (LTE LB mode) 
+
+
+Input clock period jitter, DC mode 0.14 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 50 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+AVI f= D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Symbol 
+Input clock period jitter, SC mode & GSM 
+mode 
+Differential input resistance 
+
+LTE HB mode 
+
+LTE LB mode 
+
+DC mode 
+
+SC mode & GSM mode 
+
+
+Output sampling rate 
+
+
+Differential input referred offset 
+
+
+Signal to in-band noise 
+— LTE HB mode, 2.4Vpp (10.2MHz) 
+sinewave, 1kHz ~ 9MHz band 
+
+
+— LTELB mode, 2.4Vpp (5.2MHz) sinewave, 
+1kHz ~ 4.5MHz band 
+
+
+— DC mode, 2.4Vpp (5.2MHz) sinewave, 
+400kHz ~ 4.6MHz band 
+
+
+— SC mode, 2.4Vpp (2.7MHz) sinewave, 
+1kHz ~ 2.1MHz band 
+
+
+— GSM mode: 2.4Vpp(570kHz) 
+sinewave, 70kHz ~ 270kHz band 
+
+
+DVDD18 |Digital power supply 
+AVDD18 |Analog power supply 
+
+
+T Operating temperature 
+
+
+4 
+< 
+9 E 
+
+
+(o>) 
+
+
+416/208 
+
+
+FS 
+VOS 
+
+
+(ep) 
+Co 
+
+
+1 OU = sch 
+
+
+NINO 
+N N OO 
+
+
+wesch, | — 
+SIE 
+
+
+-20 
+
+
+Current consumption (per channel) 
+—  Power-up 
+—  Power-down 
+
+
+2.5.3.2 TD BBRX 
+
+
+2.5.3.2.1 Block Descriptions 
+
+
+The receiver (Rx) performs baseband UO channels downlink analog-to-digital conversion: 
+
+3. Analog input multiplexer: For each channel, a 2-input multiplexer is included. 
+
+4. A/D converter: 2 high performance sigma-delta ADCs perform I/Q digitization for further digital 
+signal processing. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 51 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+A E D l A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2's complement 
+S, 
+
+
+Thermometer (fs) 
+
+
+TD Rx BBIP[ } 
+
+
+og = Encod I 
+Modulator d ncoder »[ ]bour ma 
+
+
+»[ ]c«our. 2o8« 
+| 
+
+
+AX PE — 
+Modulator á HESS) »[ ]pour ars: 
+
+
+Figure 2-8: Block diagram of TD BBRX-ADC 
+
+
+2.5.8.8 Function Specifications 
+See the table below for the function specifications of the base-band downlink receiver. 
+
+
+Table 2-11: Baseband downlink specifications 
+
+
+[Sym [Parameter —— | Mm. | Tw | Wax | Um | 
+[VIN [Diferental analog input voltage (peaktopea) |_| | 24 | v | 
+[tem [Common mode input curent magnitude — —]| || 3 [a] 
+[ VM [Common mode inputvottage 37 | os | 98 | V | 
+[ rc deme SS o ë —[-9 | - —]| M] 
+[ —  [mtekdygde —— — — | $5 | o | $95 | a 
+"euer ll [oo [tms] 
+
+Guatemala 
+
+E 
+
+
+Signal to in-band noise 
+— 2.4Vpp (1.6MHz) sinewave, 1KHz ~ 640KHz 
+band 
+
+
+Current consumption (per channel) 
+— Power-up 
+— Power-down 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 52 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2.5.3.4 LTE_BBTX 
+
+
+2.5.3.4.1 Block Descriptions 
+
+
+BBTX includes two channel DACs with the 17 order low pass filter. The DACs are PMOS current- 
+steering topology with NMOS constant sinking current and the active RC filter performs current to 
+voltage buffer. 
+
+
+The bitwidth of DACs is 11-bit which is encoded into 7 bits of thermometer code and 8 binary code by 
+digital hard macro inside BBTX layout. The encoded bits are timing synchronized by D-type flip-flop 
+which is toggled by the analog local clock. The MD-PLL delivers 8332MHz differential clock to BBTX. A 
+clock divider translates the 882MHz to 416MHz for DACs and AFIFO inside mixedsys. 
+
+
+i Decoder : 2's --> Binary 
+
+I 
+
+12V Buffer 
+
+— > 1°'Order LPF 
+
+i b dq» , 
+
+L| 
+
+1 I 
+
+i Decoder : 2’s --> Binary 
+
+f EN 
+
+I2V Buffer 
+
+b 1" Order LPF 
+PX] 
+
+D [| 
+
+© [| 
+
+ie 
+
+[| 
+
+$—— N 
+
+Gemeng ivi I 
+
+O CLK Divider [>o 
+
+o—— Zf} zasne 
+
+9 
+
+
+Power ON 
+Sequence 
+
+
+0---0--9 
+
+
+Figure 2-9. Block diagram of LTE BBTX 
+
+
+2.5.3.4.2 Functional Specifications 
+
+
+Table 2-12. LTE BBTX specifications 
+
+
+[symbol | — Paameer | Mim. | ae 
+
+
+| HF leakage current @ supply, 
+$ Irms @416*2 = 832MHz 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 53 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+AVI f= D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+| Symbol | Parameter | Min | Typ. | Max | Unt | 
+| Ve | DACoutputswing | Jao] | w | 
+CEET 
+| Fs [Samplingclock | —— | 46 | | m | 
+| ms  |isgmaDACuntcellmsmath | J | 1 | % | 
+
+
+m | Ssigma Va gainmismatch —— | 92 | | 92 | œ  ] 
+Ve | Ssigma output diferental DC os | | — | 2 | m ] 
+Fæ [808 comerfreq. 0 — [2 | | e 
+[ Noo | Output noise ever Eent | | 49 | — — |mvmssenita| 
+[ Dm [Inband Droop o o 1]  $ ] 
+EE M NC 
+es EE 
+
+
+mV 
+
+
+ir H 
+
+
+Current consumption 
+— Power-up 
+— Power-down 
+
+
+2.5.3.5 TD_BBTX 
+
+
+2.5.3.5.1 Block Descriptions 
+
+
+BBTX includes two channels of DACs with the first order low pass filter. The DACs are PMOS current- 
+steering topology with NMOS constant sinking current, and the active RC filter performs current to the 
+voltage buffer. 
+
+
+The bitwidth of DACs is 10-bit which is encoded into 7 bits of thermometer code and 7 binary code by 
+mixedsys hardware. The encoded bits are timing synchronized by D-type flip-flop which is toggled by 
+the analog local clock. MD-PLL deliver 832MHz differential clock to BBTX. A clock divider translates 
+832MHz to 416MHz for DACs and AFIFO inside the mixedsys. 
+
+
+The IO power, DVDD18 MD, is regulated to a voltage around 1.55V to supply analog component, and 
+the required bias currents are generated by BBRX. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 54 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+DEE EE GGGOO ----- 
+1 Decoder : 2’s --> Binary l 
+X 
+© DV Buffer 1 
+E "Order LPF 
+b d» p EN 
+I [ 
+[ 
+l | I 
+1 Decoder : 2's --> Binary | 
+' X 
+Q E DV Buffer I 
+b 1"Order LPF 
+p ep » PS 
+o [ 
+© 
+maa [ 
+; | 
+SN DVDD18 to AV15 
+—— CLK Divid 
+© ivider O Le D 
+SE ele p? | 
+© a 
+Q [ 
+M Power ON 
+Sequence 1 
+U 
+Q) 
+
+
+Figure 2-10. Block diagram of TD_BBTX 
+
+
+2.5.3.5.2 Functional Specifications 
+
+
+Table 2-13. TD_BBTX specifications 
+
+
+Symb [Parameter | min. | Typ. | Max | Umi | 
+Ims @416*2=832MHz 
+
+ve DACompusung J | 8195 
+i 
+
+
+Sampling clock MHz 
+1-sgma DAC unit cell mismatch 96 
+Gni 
+
+
+V 3-sigma output differential DC offset over V 
+os-T  |temp. TB 
+
+
+| Va S-simaoutputdifferenialDC offset | — | | 10 | mV | 
+
+
+Sr Jrraeom gen EC ER NEEN 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 55 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+mE 
+MEE SERE NE NE 
+2 | d 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+[Symbol | Parameter | Mm. | Typ. | max | Uni. | 
+
+
+| CN Jude noise ratio@45MHz | | 744 | 4140 | Bortz 
+In-band two-tone test swing ` 
+
+
+Current consumption 
+Power-up 
+Power-down 
+
+
+2.5.3.6 ETDAC 
+
+
+2.5.3.6.1 Block Descriptions 
+
+
+The ETDAC (Envelope tracking DAC) provides analog envelope signal to external ET modulator. It 
+includes: 
+
+
+1. 11-bit D/A converter: Converts digital modulated signals to analog domain. The input to the DAC 
+is sampled at 416 MHz rate with the 11-bit resolution. 
+
+2. Smoothing filter: The low-pass filter performs smoothing function for DAC output signals with a 
+15/30MHz 1st-order Butterworth frequency response. 
+
+
+LDO LDO 
+1.8V 1.05V e 1.55V 
+
+
+EN 
+
+
+ET P 
+
+
+DIN<10:0> LI Current X 
+(2's complement) LPF 
+DAC 
+15M/30MHz y 
+
+
+CLK 416M [I 4k 
+
+
+CH 
+
+
+ET_N 
+
+
+CLK 26M D 
+sEQ EN [D 
+SEO RsTB LH 
+
+
+Power-On 
+Sequence 
+
+
+Figure 2-11. Block diagram of ETDAC 
+
+
+2.5.3.6.2 Function Specfications 
+
+
+Table 2-14. ETDAC specifications 
+
+
+Symbol | Sange Wa | e | Mex | m | 
+[ N [eso — — CCC S 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 56 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Symb | Parameter | Mm Tw. [ ma | um | 
+[ rS [Smpigme O O — — — (| | 46 | | Mss | 
+ims [8% order intermodulation dstorion IJ al s | æ | 
+[ — ([Owuswm(usSwg | | 2 | Led ] 
+
+
+[ VOOW [OuputcMvotage — | 96 [ | 95 [ Y — 
+[ Youtput capacitance ngieended) — | —— | . | 9 [ P 
+ënger mee OO [ 39 | [| KA 
+[ DN. [Dfemmaimonney Lilli LI 
+[ M. Unger ë a | — | S| 
+[ FCUT | Fiter -30B cutoff frequency aae] — | — | oo | | M 
+[ T [Operating temperature | o | | 8 | "€ | 
+
+Current consumption 
+
+— Power-up 
+
+— Power-down 
+
+
+2.5.3.7 APC-DAC 
+2.5.3.7.1 Block Descriptions 
+
+
+See the figure below. APC-DAC is designed to produce a single-ended output signal at APC pin. 
+
+
+RG_APCBUF_TRIM[3:0] 
+
+
+RG_APC_TGSEL 
+
+
+Figure 2-12. Block diagram of APC-DAC 
+
+
+2.5.3.7.2 Functional Specifications 
+See the table below for the functional specifications of the APC-DAC. 
+Table 2-15. APC-DAC specifications 
+
+
+GEELEN 
+Tel 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 57 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+AVI f= D A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+[ Symbo | Parameter | mm. | Tvp | Max | Umi | 
+Signal-to-noise-and-distortion ratio o P] |e) 
+(10kHz sine wave with 1.0V swing) 
+Settling time (99% full-swing settling) EL e 
+
+
+[e emm SEMEN 2ER 
+
+
+Ls bs = eem ht 2200 E: 
+
+
+[ 081 | 19 
+[26 | 2s 
+E GENER 
+BENE ONENENE S 
+[1 [|a| a] 
+
+
+Current consumption (power-on state) 
+lorr Current consumption (power-down state) 
+
+
+2.5.3.8  AUXADC 
+
+
+2.5.3.8.[0 Block Descriptions 
+
+
+The auxiliary ADC includes the following functional blocks: 
+
+
+1. Analog multiplexer: Selects signal from one of the auxiliary input channels. There are 16 input 
+channels of AUXADC. Some are for internal voltage measuring and some for external voltage 
+measuring. Environmental messages to be monitored, e.g. temperature, should be transferred to 
+the voltage domain. 
+
+2.  12-bit A/D converter: Converts the multiplexed input signal to 12-bit digital data. 
+
+
+See 
+Table 2-16. Definitions of AUXADC channels for brief descriptions of AUXADC input channels. 
+
+
+PAD AUXIN«2:0» 
+
+
+Digital 
+Controller| 
+Internal Use 
+Internal Use 
+
+
+MediaTek Confidential € 2013 - 2014 MediaTek Inc. Page 58 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Figure 2-13. Block diagram of AUXADC 
+
+
+Table 2-16. Definitions of AUXADC channels 
+
+
+2.5.3.8.2 Functional Specifications 
+See the table below for the functional specifications of auxiliary ADC. 
+
+
+Table 2-17. AUXADC specifications 
+
+
+Input capacitance 
+Unselected channel 
+Selected channel 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 59 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+| Symbol | Parameter | Min. | Typ. | Max. | 
+
+
+Differential nonlinearity WE +1.0/-1.0 EEEMETE 
+
+
+Integral nonlinearity EN ETT TT ise | 
+SINAD Signal to noise and distortion ratio (1kHz 
+
+
+full swing input & 1.0833MHz clock rate) 
+
+
+Current consumption 
+Power-up 
+Power-down 
+
+
+2.5.3.9 Clock Squarer 
+
+
+2.5.3.9.4 Block Descriptions 
+
+
+For most VCXO, the output clock waveform is sinusoidal with too small amplitude (about several 
+hundred mV) to make digital circuits function well. The clock squarer is designed to convert such a 
+small signal to a rail-to-rail clock signal with excellent duty-cycle. 
+
+
+2.5.3.9.2 Functional Specifications 
+See the table below for the functional specifications of clock squarer. 
+
+
+Table 2-18. Clock squarer specifications 
+Symbol 
+
+
+| Min. | | Max | Unit | 
+[m fe 000 189 09] pe 
+[Tw peer e 39 | pe 
+
+| 1000 | mVpp | 
+
+
+: 
+: 
+Input signal amplitude 50 1,000 mVpp 
+DcycIN  |Input signal duty cycle 5 % 
+DcycOUT | Output signal duty cycle DcyclN-5 EN DcycIN+5 
+| KH 
+Fall time on pin CLKSQOUT WER E 
+[ DVDD [Digital power supply V 
+AVDD Analog power supply 1.7 V 
+
+
+Operating temperature NEN 
+"EE! Current consumption EE 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 60 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+Fin 
+in 
+Rise time on pin CLKSQOUT 
+| 
+D 
+
+
+E 
+
+NE NO 
+pus] 
+a 
+
+
+o 
+u 
+
+
+MEDIATEK 
+
+
+2.5.3.10 Phase Locked Loop 
+
+
+2.5.3.10.1 Block Descriptions 
+
+
+MT6595 
+
+Octa-Core Smartphone 
+Application Processor 
+Technical Brief 
+Confidential A 
+
+
+There are total 18 PLLs in PLL macro, providing several clocks for CPU, BUS, modem, analog 
+
+
+modem, MSDC and image-sensor. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. 
+This document contains information that is proprietary to MediaTek Inc. 
+
+
+Page 61 of 73 
+
+
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+A E D l A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Analog Special 
+Divider 
+
+
+ADA_SSUSB_XTAL_CK 
+
+
+cLksa| 
+J AD_LTEPLL_FS26M_CK 
+
+
+RE] | AD LTEPLL ARMPLLIGM C 
+
+
+[ AD LTEPLL MIPI26M CK 
+Bias/ EDO Haan LrePLL ssusb26M ck 
+" Kä j ` AD_LTEPLL_FS416M_CK 
+
+
+AD_LTEWPLL_491P52M_CK 
+
+
+TAD.LTEX2M 1S |- 
+
+
+AD. TDPLL, FS26M. CK 
+
+
+RG CLKSQI EN- 
+
+
+AD. TDPLL. FS4I6M. CK 
+
+
+INs TDPLL. PLLGP26M. CK 
+To BETRX 
+NS TDPLL. 32M. Cer 
+NSCTDPLL 32M. CKN 
+
+
+> AD OGTWPLL. 245P76M. CK. 
+
+
+MT6595 ARMPLLGP 
+
+
+som pL L $a LTEWHPLL awe CK 
+d AD_LTEPLL_ARMPLL26M_CK 9 
+
+
+(Hop 202) 
+
+
+AD PLLGP TST. CK. 
+
+
+AD. CRAPLL, 96M. CK. 
+
+
+CRAPLL2 ` 
+E ‘SOM. uL ] 4 g A AD_CR4PLL2_800M_CK 
+an a ; 
+
+
+AD ARMCATPLL, 1508M. PRO. CK 
+
+
+AD ARMCATPLL. 1508M. CORE. CK 
+
+
+AD. ARMCAITPLL, 20024. PRO. CK. 
+
+
+DA ARMCPU. Mt 
+AD. ARMCAI7PLL, 2002M. CORE. CK 
+
+
+H AD LTEDSPPLL 299M. CK 
+
+
+SDM PLL A AD_MAINPLL_1092M_CK 
+[om jl 
+
+
+SDM PLL AD MMPLL. 520M. CK 
+
+
+-) AD VENCPLL 759M. CK 
+
+
+SDM PLL | AD_TVDPLL_594M_CK 
+ern J 1 
+
+
+DAD. TVDPLL 445PSM. CK 
+
+
+(1248MHz) AD_UNIVPLL_1248M_CK 
+
+
+A AD_UNIV_48M_CK 
+
+
+AD_USB20_48M_CK 
+AD_SSUSB_48M_CK 
+
+
+-j AD_MSDCPLL_800M_CK 
+
+
+ADA_MEMPLL_REFCKN 
+ADA_MEMPLL_REFCKP 
+
+
+EL 
+
+
+AD ALL I80P6336M. C 
+D 
+
+
+JD_APLL2_196P608M_ 
+cK 
+
+
+VCODECPLL 
+
+
+SDM PLL AD VCODECPLL 494 
+
+
+| (Hop eme ` x AO 
+
+
+Figure 2-14. Block diagram of PLL 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 62 of 73 
+
+
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2.5.3.10.2 Functional Specifications 
+See the table below for the functional specifications of PLL. 
+Table 2-19. ARMCA7PLL specifications 
+
+[ Symbo Femme [ Mm. | Wyp. | Mex | Uni | 
+[m [mumewams Lal [v 
+"e | Li Le: 
+[mmm EEN 
+O EE | e| 9 | 9 [ 
+
+
+DVDD [Digital power supply 
+AVDD (Analig piner gupoh MMC 
+
+
+Table 2-20. ARMCA17PLL specifications 
+| Symbol | Parameter ` ` Tue | Typ. | Max. | Unit | 
+[m mem | 9 p (rm: 
+[fu umen JL Jm 
+| qemewme ms 
+O [5 [ 9 [8 [9 
+
+
+DVDD [Digital power supply 
+VDE: faalo powensubnly SE 
+
+
+Table 2-21. MAINPLL specifications 
+
+
+[Symbol [Parameter | min | Typ. | Max | Uni | 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 63 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Symbol | Parameter | Min | Typ | Max | Unit | 
+
+
+HN eae NEG 
+
+
+Table 2-22. MMPLL specifications 
+ma a o a) 
+
+
+ĪA 
+
+
+Table 2-23. UNIVPLL specifications 
+Symbol [Parameter Ce [ me [Me Cer 
+
+
+| Fout  |Output clock frequency NA | 1248 erter: 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 64 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Symbol | Parameter | Mi. | Ty. | Max | 
+
+
+Operating temperature 
+a Current consumption 
+
+
+Power-down current consumption 
+
+
+Parameter 
+
+
+Input clock frequency 
+
+
+Output clock frequency 
+
+
+Table 2-25. MDPLL1 specifications 
+
+
+Symbol | Parameter | Mim | Typ. | Max | Umi | 
+NINE I E ee 
+
+
+EN LI IL WS pe 
+DVDD [Digtal power supply 
+AVDD [Analog power supply 
+
+T 20 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 65 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+
+
+Confidential A 
+
+
+Smo [Parameter Tin [ me | Mae [on 
+
+
+Table 2-26. MDPLL2 specifications 
+EE EE 
+
+
+Output clock frequency a ae 
+
+
+ENN ee ce RSC 
+ipa coker pee ia 
+
+
+Operating temperature 
+
+
+= Current consumption 
+Kc Power-down current consumption 
+
+
+Symbol Parameter 
+EIN Input clock frequency 
+
+
+Fout Output clock frequency 
+
+
+[oe] Settling time 
+ERI Output clock duty cycle 
+BENE Output clock jitter (period jitter) 
+
+
+DVDD Digital power supply ` = 
+AVDD Analog power supply 
+
+
+RE Operating temperature 
+
+
+Table 2-28. LTEWHPLL specifications 
+
+
+[Symbol | .  Paameer | Mi. | Ty. | Max | Unit | 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 66 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+Symbol PE E | Te | Mee | Unit _ 
+
+
+NEN ll Paes 
+DVDD [Digtal power supply 
+AVDD ` [Analog power supply 
+
+
+Table 2-29. CR4PLL specifications 
+E ee eer 
+
+
+EE WER 
+DVDD [Digtal power supply 
+AVDD ` [Analog power supply 
+
+
+Table 2-30. VENCPLL specifications 
+Symbol | — rue [| Win. [ me Te [ Unt | 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 67 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+[Symbol | Parameter | mm | Tw | 
+[ DVDD [Digtal powersuppy | os | 19 | 
+AVDD [Analog power supply Ju | 18 | 
+
+
+1.7 
+T Operating temperature a 
+in 
+
+
+Symbol | Parameter [| Mm. | 
+[ Fm mutdokWeqeny | | 
+[ Fox [Output clock frequency — | | 
+ëtt LI ] 
+[  oupuceckduyoe —— | 47 | 
+Output clock jiter period jte — | — | 
+[ T [Operating temperature — | æ | | 99 
+Curent consumption — 
+E 
+
+
+Power-down current consumption 
+
+
+Typ. 
+1.0 
+1.8 
+
+1 
+
+Typ. 
+
+26 
+445.5 
+20 
+50 
+1.0 
+1.8 
+1 
+
+
+Symbol Parameter 
+
+
+Input clock frequency 
+Output clock frequency 
+
+
+Settling time 
+
+
+MEME 
+| [Output clock duty cyce | 47 | 50 | 58 | 
+p 
+| DVDD | 
+
+
+DVDD 
+
+
+[ T [Operating temperature — | 29 | | 9 | c 
+[ —  ewewcnsmpon III Lan 
+| jPewe-downcurentconsumpion | | | oa | uA 
+
+
+Table 2-33. OGTWPLL specifications 
+
+
+[Symbol | Parameter | Mim | Ty. | Max | Umi | 
+[ Fi [input clock requeney | | æ | | Mm | 
+
+
+[ Fout [Output clock frequency — — — | —— [24976 | — | Mm | 
+[ femme ^ — — —  — —| — o 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 68 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+
+
+Confidential A 
+
+
+[Symbol | Parameter | mm | Tw | 
+[  owptcekduygde |v | S0 | S 
+
+[ —  oupueekjtererodjte] 1 | o | | 
+
+[ T [Operating temperature — | 29 | | 9 | "6 
+[ —  ewencnumpon —  — — (| — 3 im 
+[  Pewedowncurentconsumpio] — | | | 94 | uA 
+
+
+Table 2-34. LTEDSPPLL specifications 
+
+
+| Symbol | Parameter | Min. | Typ | Max | Unit | 
+| Fin Inn deck frequency | — — | 26 | (wes 
+| Fout [Output clock frequency JI | 29 | | me | 
+| [Settingtime | | 20 | |u| 
+|. [Outputolock duty cycle LI 50 | 53 | % | 
+[ Oupucockjter(erodjüe) — | | 80 | — 
+[ T [Operating temperature | o | J 80 | 
+[ — Owencosumpion —  — 1 — | 3 [|  — 
+P| Power-down current consumption ooo ee eee 
+
+
+Table 2-35. MPLL specifications 
+Parameter 
+
+
+Input clock frequency 
+Output clock frequency 
+
+
+[ T JOperating temperature | o | Lal 
+[~~ Jeurrent consumption | — | 3 | Im 
+[  jPowedomcurenconmumpio — | | | o | w^ | 
+
+
+Table 2-36. APLL 1 specifications 
+
+
+[Symb | —  Pammete Wa | Typ. | Max | Uni | 
+"al Lu 
+
+
+| Fin Jup clock frequency | 
+| Fout [Outputclock frequency JL 180.6386] — | MHz | 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 69 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+ME D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+[Symbol | Parameter | min | Typ. | max | Unt | 
+
+
+[ Wü IL | 23 | o 
+[  owmteekduygde — LS |o | 8 [| * 
+[ oupueeckjterperodjte] — | | o | | Prs 
+[ T JOperating temperature — | 29 | J 9 | "6 
+[ —  ewencmumpon —  — (| — | 3 | Lan 
+L [Power-down current consumption — | | | 94 | uA 
+
+
+Table 2-37. APLL2 specifications 
+
+
+[Symbol |  Paameer [| min. | Typ. | Max | Unit 
+[ Fm |Inputlock frequency | Lal |m 
+[ Fox [Output lock frequency 1 [19668 | ` Iw 
+[ mmm ^ ë | — | 23 | Im 
+[ — owmteekduygde LS |o | 8 | * 
+[ oupucekjterperdjte] — | | o | | Prs 
+[ T [Operating temperature — | 39 | | 9» | "6 
+[ —  ewencnumpon III Lan 
+L [Power-down current consumption — | | | 94 | ua 
+
+
+Table 2-38. VCODECPLL specifications 
+
+
+[Symbol | Parameter | Mi. | Ty. | Max | Unt | 
+[ Fm (mutdokWegeny | | e | |m 
+[ Fox [Output cock frequency | — | 49 | | m 
+E a 3 |  — 
+
+[ —  owwteekduygde — a | so 55 
+[ oupucekjterperodjte] — | | o | | 
+[ T [Operating temperature — | æ | | o 
+[ —  Jëmetemmge O Jo  — 
+[Power-down current consumption | | | o 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 70 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+AI f= D Léi TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2.5.3.11 Temperature Sensor 
+
+
+2.5.3.11.1 Block Descriptions 
+
+
+In order to monitor the temperature of CPUs, several temperature sensors are provided. The 
+temperature sensor is made of substrate BJT in the CMOS process. The voltage output of 
+temperature sensor is measured by AUXADC. 
+
+
+2.5.3.11.2 Functional Specifications 
+See the table below for the functional specifications of temperature sensor. 
+
+
+Table 2-39. Temperature sensor specifications 
+
+
+| Symbol | Parameter | Min. | Typ | Max | Unit | 
+omm bI 
+
+
+Lem rs s 
+NEN L NENNEN MUNERE SN 
+ENNL II ONE NE NM NEMEEK S 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 71 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED Eu TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2.6 Package Information 
+
+
+2.6.1 Package Outlines 
+
+
+-- 00.56+0.04 
+PIN AT CORNER 72 (OUTER HOLE DIAMETER) 
+TOP SIDE INFORMATION 
+¢0.30+0.04 Hem St [Commen Dimensions 
+MI NOM. AX. 
+(INNER HOLE DIAMETER) Se SE 
+all Fita cà E Sam 
+0~0.12 Ball Diameter 0.25 
+0^0. 
+// |eec]C Ball Width 3 0.20 | 0.25 | 0.30 
+» 
+E Ball Offset (Package) kkk 0.15 
+= 
+"MEINE: Ball Offset (Ball) mmm 0.05 
+} E 
+j 
+; Ball Count p 256 
+H if A J t P x 02 13.20 
+Y Edge Ball Center to Center l a EE 
+SOLDER BALL - 
+| e ie PLANE < 
+£^ |ddd|C BOTTOM SIDE INFORMATION 
+DETAIL : "A" Item Symbol comman Dimensions 
+RERSOISDR Package Type MLP WFPOP 
+4 T: 
+(mmm |C x D 139 [ 140 [ 14.1 
+S 2 ae Body Size E 138 | 140 | 14.1 
+=a $c(n X) Ball Pitch ae oan 
+AM | | O Mold Thickness m 0.25 Ref 
+A O Substrate Thickness A2 0.30 Ref. 
+IN { 
+f N A Substrate+Mold Thickness M 0.51 | 055 | 0.59 
+AP { O Total Thickness A - | - | 07 
+Kee pee 625 
+1 A 1 Ball Stand Off Li 0.12 0.16 0.20 
+L 9 Boll Width p | 0.20 | 0.25 | oa 
+DETAIL : "B" 
+= ROADE Package Edge Tolerance ooa 0.05 
+PEOC 
+Zelt Mold Flatness cce 0.10 
+Eb y 
+E ob ( n X ) Coplanarity ddd 0.10 
+(^ 
+U SP E, Ball Offset (Package) eec 0.15 
+B O 2 O Ball Offset (Ball) H 0.05 
+PETI. 
+= = = \ Ball Count n 823 
+Aë e EN 1 1 
+A OG. Edge Ball Center to Center [—— | 3% 1320 
+b | Edge Ball Center to Package Edgel —> = s 
+5 
+T BOTTOM VIEW 1 ^ » 3 
+———— DETAIL : "C 
+TITLE PACKAGE OUTLINE 
+
+
+MWFPOP 823L 14.0X14.0X 0.78mn MEDIATEK 
+
+
+DWG. NO. REV. SHEET ECH 
+MT-P00116 A 1 OF 2 MM 
+
+
+Figure 2-15. Outlines and dimensions of WFPOP 14mm*14mm, 823-ball, 0.4mm pitch package 
+
+
+2.6.2 Thermal Operating Specifications 
+
+
+Table 2-40. Thermal operating specifications 
+
+
+| Symbol | Description | Value | Unit | Notes | 
+
+
+fF Maximum operating junction temperature | 125 | ^C | | | 
+fF Package thermal resistances in nature convection °C/Watt P 
+
+
+2.6.3 Lead-free Packaging 
+
+
+MT6595 is provided in a lead-free package and meets RoHS requirements. 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 72 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
+
+
+MT6595 
+Octa-Core Smartphone 
+
+
+MED A TEK Application Processor 
+
+
+Technical Brief 
+Confidential A 
+
+
+2.7 Ordering Information 
+
+
+2.7.1 Top Marking Definition 
+
+
+MEDIATEK YYWW: DATE CODE 
+
+
+A R M #: SUBCONTRACTOR CODE 
+&&&&&&&: LOT NO. 
+
+
+MT6595W 
+YYWW-AHH#H 
+B&&&&&&& 
+
+
+Figure 2-16. Top mark of MT6595 
+
+
+MediaTek Confidential © 2013 - 2014 MediaTek Inc. Page 73 of 73 
+This document contains information that is proprietary to MediaTek Inc. 
+Unauthorized reproduction or disclosure of this information in whole or in part is strictly prohibited. 
