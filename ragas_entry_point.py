@@ -14,7 +14,7 @@ from ragas.metrics import (
     answer_relevancy,  
     context_precision,
     context_recall,
-    context_relevancy,
+    # context_relevancy, Not usefule metric, deprecated see https://github.com/explodinggradients/ragas/pull/1111
     faithfulness,
 )
 from ragas.testset.evolutions import multi_context, reasoning, simple
@@ -53,7 +53,7 @@ def evaluate_model(model: ModelEvalInterface, test_df: pd.DataFrame):
         result = evaluate(
             dataset=dataset,
             metrics=[
-                context_relevancy,
+                # context_relevancy,
                 context_precision,
                 context_recall,
                 faithfulness,

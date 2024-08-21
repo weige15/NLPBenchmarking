@@ -2341,13 +2341,13 @@ files = [
 
 [[package]]
 name = "ragas"
-version = "0.1.2"
+version = "0.1.14"
 description = ""
 optional = false
 python-versions = "*"
 files = [
-    {file = "ragas-0.1.2-py3-none-any.whl", hash = "sha256:c03e4e3a24ac48de578aa7c6c317b31971977caefe53cce90718622a4c31ef24"},
-    {file = "ragas-0.1.2.tar.gz", hash = "sha256:6147d31120ec9b04ef69f84759f2376e3de6dab2e06b4d30cdf53cce76bebfa1"},
+    {file = "ragas-0.1.14-py3-none-any.whl", hash = "sha256:064f3a906bafff2c04035f3c60bf78136be7e8d949ba244cb5da699b746027fa"},
+    {file = "ragas-0.1.14.tar.gz", hash = "sha256:06141497aaf2151a1b403aaadb80009af43228acec9126a78ba8bf44110ed75d"},
 ]
 
 [package.dependencies]
@@ -2364,7 +2364,7 @@ pysbd = ">=0.3.4"
 tiktoken = "*"
 
 [package.extras]
-all = ["sentence-transformers"]
+all = ["sentence-transformers", "transformers"]
 
 [[package]]
 name = "regex"
@@ -3096,4 +3096,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "e026e5a2cc27863908cc10b5c9a9b5ada76fb3f6384363fdfecba5b27cd28ab2"
+content-hash = "503f2c7aaf1c9aac26375aed799a70ef1ef3a348623bb78a58407a24bd43754d"
