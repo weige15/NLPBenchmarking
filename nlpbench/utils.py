@@ -1,6 +1,9 @@
 import logging
 import os
- 
+from typing import Optional, Callable
+import warnings
+
+
 class ColoredFormatter(logging.Formatter):
     def __init__(self, fmt, datefmt=None):
         super().__init__(fmt, datefmt)
@@ -55,16 +58,74 @@ def create_logger(name: str) -> logging.Logger:
     return logger
 
 
-# Create decorator with dates and reason saying why a function is deprecated
-def deprecated(reason, date):
-    def decorator(func):
-        def wrapper(*args, **kwargs):
-            raise NotImplementedError(
-                f"{func.__name__} has deprecated since {date} and will be removed in the future.\n"
-                f"Reason: {reason}\n"
-            )
 
-        return wrapper
+# Stole this from ragas, very nice
+def deprecated(
+    since: str,
+    *,
+    removal: Optional[str] = None,
+    alternative: Optional[str] = None,
+    addendum:Optional[str] = None,
+    pending: bool = False,
+):
+    """
+    Decorator to mark functions or classes as deprecated.
 
-    return decorator
+    Args:
+        since: str
+             The release at which this API became deprecated.
+        removal: str, optional
+            The expected removal version. Cannot be used with pending=True.
+            Must be specified with pending=False.
+        alternative: str, optional
+            The alternative API or function to be used instead
+            of the deprecated function.
+        addendum: str, optional
+            Additional text appended directly to the final message.
+        pending: bool
+            Whether the deprecation version is already scheduled or not.
+            Cannot be used with removal.
 
+
+    Examples
+    --------
+
+        .. code-block:: python
+
+            @deprecated("0.1", removal="0.2", alternative="some_new_function")
+            def some_old_function():
+                print("This is an old function.")
+
+    """
+
+    def deprecate(func: Callable):
+        def emit_warning(*args, **kwargs):
+            if pending and removal:
+                raise ValueError(
+                    "A pending deprecation cannot have a scheduled removal"
+                )
+
+            message = f"The function {func.__name__} was deprecated in {since},"
+
+            if not pending:
+                if removal:
+                    message += f" and will be removed in the {removal} release."
+                else:
+                    raise ValueError(
+                        "A non-pending deprecation must have a scheduled removal."
+                    )
+            else:
+                message += " and will be removed in a future release."
+
+            if alternative:
+                message += f" Use {alternative} instead."
+
+            if addendum:
+                message += f" {addendum}"
+
+            warnings.warn(message, stacklevel=2, category=DeprecationWarning)
+            return func(*args, **kwargs)
+
+        return emit_warning
+
+    return deprecate
